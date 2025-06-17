@@ -93,14 +93,25 @@ WSGI_APPLICATION = 'tinos_project.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'tinos_db',
+#         'USER': 'root',
+#         'PASSWORD': 'Me@dev#123',
+#         'HOST': 'localhost', 
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tinos_db',
-        'USER': 'root',
-        'PASSWORD': 'Me@dev#123',
+        'USER': 'postgres',
+        'PASSWORD': 'Mypgadmin@123',
         'HOST': 'localhost', 
-        'PORT': '3306',
+        'PORT': '5432',
     }
 }
 
