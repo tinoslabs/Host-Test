@@ -1,0 +1,683 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <!-- Hero Start  -->
+        <!-- Hero Start  -->
+        <section class="hero-section text-white hero-ten" style="background: url('static/assets/img/dark-blue-plain.jpg')no-repeat center center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="hero-content-wrap mt-5 mt-lg-0 mt-xl-0">
+                            <h1 class="fw-bold display-5 text-white">
+                                Elevating Your Cyber Security Standards
+                            </h1>
+                            <p class="lead">
+                                With our cutting-edge solutions and vigilant approach, we elevate your cyber security standards to unprecedented levels. Trust us to safeguard your digital assets with unwavering commitment and expertise.
+                            </p>
+                            <div class="action-btn mt-5 align-items-center d-block d-sm-flex d-lg-flex d-md-flex">
+                                <a href="{% url 'service' %}" class="btn btn-primary me-3">Discover More</a>
+                               
+                                {% for video in youtube_video %}
+                                {% if video.url %}
+                                <a href="{{ video.url }}" target="_blank" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn mt-3 mt-lg-0 mt-md-0">
+                                    <i class="fas fa-play"></i> Watch Demo
+                                </a>
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8 mt-5">
+                        <div class="hero-img position-relative circle-shape-images">
+                            <img src="{% static 'assets/img/cyber_banner_image.svg' %}" alt="hero img" class="img-fluid position-relative z-5" />
+                        </div>
+                    </div>
+                </div>
+                <div class="cyber-down-btn text-center position-relative d-none d-lg-block">
+                    <a href="#cyber-about" class="text-primary">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Hero End -->
+        <!-- Hero End -->
+
+        <!-- Brand Logo Start-->
+        <section class="cyber-brand-logo pt-80">
+            <div class="container">
+                <div class="row">
+                    <div class="swiper brand-logo-slider">
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide position-relative">
+                                <div class="cyber-brand-logo text-center">
+                                    <img src="{% static 'assets/img/brand-logo/slack_logo.png' %}" alt="logo " />
+                                </div>
+                            </div>
+                            <div class="swiper-slide position-relative text-center">
+                                <div class="cyber-brand-logo">
+                                    <div class="cyber-brand-logo">
+                                        <img src="{% static 'assets/img/brand-logo/logo2.png' %}" alt="logo" />
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="swiper-slide position-relative text-center">
+                                <div class="cyber-brand-logo">
+                                    <div class="cyber-brand-logo">
+                                        <img src="{% static 'assets/img/brand-logo/logo3.png' %}" alt="logo" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide position-relative text-center">
+                                <div class="cyber-brand-logo">
+                                    <div class="cyber-brand-logo">
+                                        <img src="{% static 'assets/img/brand-logo/logo4.png' %}" alt="logo" />
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="swiper-slide position-relative text-center">
+                                <div class="cyber-brand-logo">
+                                    <div class="cyber-brand-logo">
+                                        <img src="{% static 'assets/img/brand-logo/logo5.png' %}" alt="logo" />
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="digtal-marketing-logo pb-120">
+            <div class="container">
+                <div class="bg-light-subtle shadow-sm py-5 px-4 rounded-3">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <h5 class="mb-4">Trusted by the best companies in the world</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="swiper digi-logo-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="single-logo">
+                                            <img src="assets/img/brand-logo/google.svg" class="img-fluid" height="30" alt="logo" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="single-logo">
+                                            <img src="assets/img/brand-logo/facebook.svg" class="img-fluid" alt="logo" height="30" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="single-logo">
+                                            <img src="assets/img/brand-logo/youtube.svg" class="img-fluid" alt="logo" height="30" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="single-logo">
+                                            <img src="assets/img/brand-logo/printerest.svg" class="img-fluid" alt="logo" height="30" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="single-logo">
+                                            <img src="assets/img/brand-logo/webflow.svg" class="img-fluid" alt="logo" height="30" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="single-logo">
+                                            <img src="assets/img/brand-logo/company.svg" class="img-fluid" alt="logo" height="30" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Brand Logo End -->
+
+        <!-- About Start -->
+        <section class="counter-with-video pt-80 pb-120" id="cyber-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="cyber-about-img text-center mb-30 mb-lg-0">
+                            <img src="{% static 'assets/img/about-cyber.jpg' %}" alt="VR" class="img-fluid" />
+                            <div class="row g-0">
+                                <div class="col-lg-5">
+                                    <div class="sheild-img">
+                                        <img src="{% static 'assets/img/about3.png' %}" alt="Sheild" class="img-fluid d-none d-lg-block" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="pe-2">
+                                        <div class="cyber-about-count-box d-md-flex bg-white p-4 mt-3">
+                                            <div class="pe-3">
+                                                <h2>15+</h2>
+                                            </div>
+                                            <div>
+                                                <h5 class="h6">Years Experience</h5>
+                                                <p class="mb-0">We Just Big Achived</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pt-5">
+                            <div class="section-heading mb-5">
+                                <!-- <h5 class="h6 text-primary">About Quiety</h5> -->
+                                <h2>We’re Advanced Cyber Security Provider</h2>
+                                <p>
+                                    Our team of cybersecurity experts leverages the latest in AI and machine learning technologies to proactively identify vulnerabilities, defend against sophisticated cyberattacks, and ensure continuous security monitoring. With our proactive approach and commitment to excellence, we not only protect your assets but also empower your business to thrive in a digital world marked by emerging threats.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="bg-white cyber-about-box mb-4 p-4 mb-lg-0">
+                                        <div class="cyber-about-icon">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div>
+                                        <h5 class="h-6">Success Project</h5>
+                                        <p>
+                                            Unlock your potential with our Success Project services
+                                        </p>
+                                        <a href="{% url 'service' %}" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-white cyber-about-box p-4">
+                                        <div class="cyber-about-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <h5 class="h-6">Team Consultancy</h5>
+                                        <p>
+                                            Transform your team dynamics with our strategic consultancy solutions
+                                        </p>
+                                        <a href="{% url 'service' %}" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About End -->
+
+        <!-- Service Start -->
+        <section class="cyber-features pt-100 bg-light-subtle">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="section-heading text-center mb-5">
+                            <h5 class="h6 text-primary">Service</h5>
+                            <h2>High Quality Trusted Cyber Security solution</h2>
+                            <p>
+                                Our Trusted Cybersecurity Solutions Ensure High-Quality Protection Against Evolving Threats.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="cyber-single-service bg-white rounded-custom mb-30">
+                            <div class="feature-icon pb-5 rounded bg-primary-soft text-primary mb-4">
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <div class="cyber feature-info-wrap">
+                                <h3 class="h5">Disaster Planning</h3>
+                                <p>
+                                    Prepare for the unexpected with our disaster planning services. We help businesses develop comprehensive strategies to minimize downtime and data loss in the event of a disaster.
+                                </p>
+                            </div>
+                            <a href="{% url 'service' %}" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cyber-single-service bg-white rounded-custom mb-30">
+                            <div class="feature-icon pb-5 rounded bg-primary-soft text-primary mb-4">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="cyber feature-info-wrap">
+                                <h3 class="h5">Cloud Security</h3>
+                                <p>
+                                    Safeguard your cloud infrastructure with our comprehensive security solutions. We provide robust encryption, access controls, and monitoring to protect your data and applications in the cloud.
+                                </p>
+                            </div>
+                            <a href="{% url 'service' %}" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cyber-single-service bg-white rounded-custom mb-30">
+                            <div class="feature-icon pb-5 rounded bg-primary-soft text-primary mb-4">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="cyber feature-info-wrap">
+                                <h3 class="h5">Database Security</h3>
+                                <p>
+                                    Protect your databases from unauthorized access and data breaches with our robust security solutions. We implement encryption, access controls, and monitoring to safeguard your valuable data.
+                                </p>
+                            </div>
+                            <a href="{% url 'service' %}" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cyber-single-service bg-white rounded-custom mb-30">
+                            <div class="feature-icon pb-5 rounded bg-primary-soft text-primary mb-4">
+                                <i class="fas fa-door-closed"></i>
+                            </div>
+                            <div class="cyber feature-info-wrap">
+                                <h3 class="h5">Locker Security</h3>
+                                <p>
+                                    Ensure the safety of your belongings with our advanced locker security solutions. We offer high-tech locking mechanisms and monitoring to protect your valuables
+                                </p>
+                            </div>
+                            <a href="{% url 'service' %}" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cyber-single-service bg-white rounded-custom mb-30">
+                            <div class="feature-icon pb-5 rounded bg-primary-soft text-primary mb-4">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="cyber feature-info-wrap">
+                                <h3 class="h5">Data Security</h3>
+                                <p>
+                                    Ensure the safety of your sensitive information with our data security solutions. We employ advanced encryption and access controls to protect your data from unauthorized access.
+                                </p>
+                            </div>
+                            <a href="service" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cyber-single-service bg-white rounded-custom mb-30">
+                            <div class="feature-icon pb-5 rounded bg-primary-soft text-primary mb-4">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="cyber feature-info-wrap">
+                                <h3 class="h5">Web Security</h3>
+                                <p>
+                                    Protect your online presence with our web security solutions. We offer comprehensive measures to safeguard your website from cyber threats and ensure uninterrupted operation.
+                                </p>
+                            </div>
+                            <a href="service" class="link-with-icon text-decoration-none">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service End -->
+
+        <!-- CTA Start  -->
+        <section class="cyber-cta pb-60">
+            <div class="container">
+                <div class="cyber-cta-bg p-5 rounded-custom" style="
+              background: url('static/assets/img/dark-blue-plain.jpg') no-repeat center
+                center / cover;
+            ">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9">
+                            <div class="cyber-cta-info position-relative">
+                                <div class="">
+                                    <h2 class="text-white">Are You Ready? Book Appoinment Now!</h2>
+                                    <p class="lead text-white mb-0">
+                                        Get Your Quite or Call : +91 7907358458
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="cyber-cta-btn">
+                                <a href="contact" class="mt-3 btn btn-primary me-auto">Making Appoinment <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA End -->
+
+        <!-- Counter Start -->
+        <section class="counter-with-video pt-60 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="cyber-video-img" style="background: url('static/assets/img/cyber-video-bg.jpg')no-repeat center top/cover">
+                            <!-- <a href="http://www.youtube.com/watch?v=hAP2QF--2Dg" class="video-icon popup-youtube popup-video-btn text-decoration-none"><i class="fas fa-play"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mt-5 mt-lg-0">
+                            <div class="section-heading mb-5">
+                                <h5 class="h6 text-primary">Protect to your life</h5>
+                                <h2>
+                                    Partner With One of the Premier as Cyber security
+                                </h2>
+                                <p>
+                                    Partner with us for world-class cybersecurity solutions that anticipate the challenges of tomorrow, keeping you one step ahead in a constantly evolving cyber landscape.
+
+
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="bg-white p-4 cyber-count-box mb-30 mb-lg-0">
+                                        <h2 class="text-primary">200+</h2>
+                                        <h5 class="h-6">Happy Clients</h5>
+                                        <p>
+                                            Elevating over 200 clients to new heights of success and satisfaction.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="bg-white p-4 cyber-count-box">
+                                        <h2 class="text-primary">500+</h2>
+                                        <h5 class="h-6">Success Project</h5>
+                                        <p>
+                                            Transforming visions into reality with over 500 successful <br>projects.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- Testimonial Start -->
+        <section class="cyber-testimonial pt-100" style="
+          background: url('assets/img/map.png') no-repeat center center / cover;
+        ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="cyber-testimonial pe-5 mb-30 mb-lg-0">
+                            <!-- <h5 class="h6 text-primary">Testimonial</h5> -->
+                            <h2 class="">Comprehensive Cybersecurity Solutions for Tomorrow's Threat Landscape</h2>
+                            <p>
+                                In an era where digital threats are evolving rapidly, our cybersecurity services stand as your first line of defense. We specialize in safeguarding your digital assets, protecting sensitive data, and ensuring uninterrupted business operations. Our comprehensive suite of cybersecurity solutions includes vulnerability assessments, penetration testing, incident response, and security awareness training. With our proactive approach and cutting-edge technologies, we help you mitigate risks, comply with regulations, and build a resilient security posture that instills confidence among stakeholders and customers alike. Partner with us to fortify your defenses against the cyber threats of tomorrow, today.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="swiper cyber-testimonial-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide position-relative">
+                                    <div class="cyber-single-testimonial bg-white shadow-sm m-3">
+                                        <!-- <div class="cyber-t-q mb-4">
+                                            <img src="{% static 'assets/img/client-md-8.png' %}" alt="quoate" />
+                                        </div> -->
+                                       
+                                            <p class="mb-30">
+                                                Protecting the online world demands constant attention and dedication. As we work to maintain cyber security standards, your support is vital. Your contribution helps keep important online services available and resilient. Join us in strengthening the digital world against new threats.
+                                            </p>
+                                      
+                                        <div class="cyber-auth-info d-flex">
+                                            <div class="pe-3 cyber-testimonial-author-img">
+                                                <img src="{% static 'assets/img/mdd.png' %}" alt="auth photo" class="" style="border-radius: 50%; width: 100px;height: 100px;" />
+                                            </div>
+                                            <div class="cyber-testimonial-author">
+                                                <h5 class="mb-0 h6">Mr. Dalvy Mathew</h5>
+                                                <span>A distinguished Cyber Security Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonia Start End -->
+
+        <!-- Faq Start -->
+        <section class="cyber-faq pt-120 pb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="section-heading text-center mb-5">
+                            <h5 class="h6 text-primary">Faq</h5>
+                            <h2>General Questions Frequently Asked Questions?</h2>
+                            <p>
+                                Find answers to common queries with our Frequently Asked Questions section, covering a range of topics to help you navigate our services seamlessly."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="cyber-faq-wrapper">
+                            <div class="accordion faq-accordion" id="accordionExample">
+                                <div class="accordion-item border border-2 rounded active">
+                                    <h5 class="accordion-header" id="faq-1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true">
+                                            How Is Encryption Different From Hacking?
+                                        </button>
+                                    </h5>
+                                    <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="faq-1" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Encryption is a method used to enhance the security of a message or file by scrambling the contents so that it can only be read by someone who has the right encryption key to unscramble it. Essentially, encryption converts readable data (plaintext) into unreadable data (ciphertext) using an algorithm and a key. It's a proactive security measure designed to protect data confidentiality and integrity.<br><br>
+                                            Hacking refers to the practice of exploiting vulnerabilities in a computer system or network to gain unauthorized access. The term can encompass a wide range of activities, from ethical hacking (where the intention is to identify and fix security vulnerabilities) to malicious hacking (aimed at theft, damage, or disruption).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border border-2 rounded">
+                                    <h5 class="accordion-header" id="faq-2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false">
+                                            What Is Firewall And Why It Is Used?
+                                        </button>
+                                    </h5>
+                                    <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-2" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A firewall is a network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Essentially, it acts as a barrier between a trusted internal network and untrusted external networks, such as the internet. Firewalls can be hardware-based, software-based, or a combination of both, and they play a critical role in defining and enforcing the security perimeter of networks.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border border-2 rounded">
+                                    <h5 class="accordion-header" id="faq-3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false">
+                                            What Steps Will You Take To Secure Server?
+                                        </button>
+                                    </h5>
+                                    <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-3" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            1)Keep Everything Up-to-Date<br><br>
+                                            2) Harden the Server<br><br>
+                                            3) Implement Strong Authentication Mechanisms<br><br>
+                                            4) Use a Firewall and Intrusion Detection Systems<br><br>
+                                            5)Encrypt Data<br><br>
+                                            6)Regularly Backup Data<br><br>
+                                            7)Monitor and Audit Server Activity<br><br>
+                                            8)Secure Network Access<br><br>
+                                            9)Apply Security Policies and Educate Users<br><br>
+                                            10)Antivirus and Anti-Malware Protection<br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item border border-2 rounded">
+                                    <h5 class="accordion-header" id="faq-4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false">
+                                            What's The Difference Between IDS And IBS?
+                                        </button>
+                                    </h5>
+                                    <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-4" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            
+It seems there's a little mix-up in the acronyms you're asking about, especially since "IBS" is commonly associated with Irritable Bowel Syndrome, which is clearly not relevant to cybersecurity. You might be contrasting IDS (Intrusion Detection System) with IPS (Intrusion Prevention System). Let me clarify these two for you, and if you meant something different by "IBS" related to technology or cybersecurity, please let me know!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cyber-faq-img text-lg-center mt-5 mt-lg-0 0">
+                            <img src="{% static 'assets/img/cb_faq1.jpg' %}" alt="cyber security" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Faq End -->
+
+        
+  <!--customer review tab section start-->
+  <section class="testimonial-section ptb-120 bg-light-subtle">
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">Testimonial</h4>
+                    <h2>What They Say About Us</h2>
+                    <p>Discover what our clients are saying about our services in their own words, providing valuable insights and testimonials that showcase our commitment to excellence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative w-100">
+                    <div class="swiper testimonialSwiper">
+                        <div class="swiper-wrapper">{% for review in review %}
+                            <div class="swiper-slide">
+                                <div class="border border-2 p-5 rounded-custom position-relative">
+                                    <img src="{% static 'assets/img/testimonial/quotes-dot.svg' %}" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                                    <div class="d-flex mb-32 align-items-center">
+                                        {% if reviews.client_image %}
+                                        <img src="{{review.client_image.url}}" class="img-fluid me-3 rounded" width="60" alt="user">
+                                        {% endif %}
+                                        <div class="author-info">
+                                            <h6 class="mb-0">{{review.client_name}}</h6>
+                                            <small>{{review.designation}}</small>
+                                        </div>
+                                    </div>
+                                    <blockquote>
+                                        <!-- <h6>The Best Template You Got to Have it!</h6> -->
+                                        {{review.review}}
+                                    </blockquote>
+                                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                    </ul>
+                                    <img src="{% static 'assets/img/testimonial/quotes.svg' %}" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
+                                </div>
+                                
+                            </div>
+                            {% endfor %}
+                        </div>
+                    <div class="swiper-nav-control">
+                        <span class="swiper-button-next"></span>
+                        <span class="swiper-button-prev"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!--customer review tab section end-->
+
+<!--cat subscribe start-->
+<!--cat subscribe end-->
+
+<!--integration section start-->
+ <!--integration section end-->
+
+<!--blog section start-->
+ <!--blog section end-->
+
+        <!-- Blog Start-->
+        
+        <section class="digi-contact pt-60 pb-120">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="digi-contact-left">
+                            <div>
+                                <span class="span-arrow">Best Yout website</span>
+                                <img src="{% static 'assets/img/arro-right.svg' %}" alt="arrow" />
+                            </div>
+                            <h2 class="mb-3">
+                                Get in touch <span class="text-orange">Today!</span>
+                            </h2>
+                            <p>
+                                Contact us today to explore how our services can address your needs and drive your success forward.
+                            </p>
+                            <ul class="d-flex list-unstyled d-flex flex-wrap list-two-col mb-0 mt-5">
+                                <li class="pe-4">
+                                    <div class="bg-white contact-box mb-4 mb-md-0">
+                                        <img src="{% static 'assets/img/icons/c-i-1.svg' %}" alt="icon" />
+                                        <h4 class="h5">Email Address</h4>
+                                        <p class="fw-bold">support@tinos.co.in</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bg-white contact-box">
+                                        <img src="{% static 'assets/img/icons/c-i-2.svg' %}" alt="icon" />
+                                        <h4 class="h5">Phone</h4>
+                                        <p class="fw-bold">+91 7907358458</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="digi-contact-form-bg bg-white position-relative">
+                            <ul class="list-unstyled d-none d-xl-block m-0">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <form method="post">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="First Name" name="first_name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="Last Name" name="last_name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" placeholder="Email" name="email"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="number" class="form-control" placeholder="Phone" name="number"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" id="yourMessage" name="message" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                    </div>
+                                    
+                                    <div class="col-3">
+                                        <button class="mt-4 btn rounded-pill bg-orange">
+                                            Get in touch
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog End -->
+
+        {% endblock %}

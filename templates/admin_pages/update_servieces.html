@@ -1,0 +1,45 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-6 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Update Serviece</h4>
+                      <!-- <p class="card-description">
+                        Basic form layout
+                      </p> -->
+                      <form class="forms-sample" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                        <div class="form-group">
+                          <label for="ServiceName">Service Name</label>
+                          <!-- <input type="text" class="form-control" id="exampleInputUsername1" name="service_name" placeholder="Serviece Name"> -->
+                          
+                          <select class="form-control" id="ServiceName" name="service_name">
+                            {% for option_value, option_label in service_options %}
+                                <option value="{{ option_value }}" {% if current_service_name == option_value %}selected{% endif %}>{{ option_label }}</option>
+                            {% endfor %}
+                          </select>
+                            <!-- <option value="Erp Development">Artificial Intelligence</option> -->
+              
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="VideoLink">Video url</label>
+                          <input type="text" class="form-control" id="VideoLink" name="url" value="{{servieces.url}}" placeholder="Enter project link">
+                      </div>
+            
+                  
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <!-- <button class="btn btn-light">Cancel</button> -->
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+            {% endblock %}

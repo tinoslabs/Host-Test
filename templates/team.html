@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <!--page header section start-->
+        <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('static/assets/img/page-header-bg.svg')no-repeat bottom left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <h1 class="display-5 fw-bold">Meet Our Team</h1>
+                        <p class="lead">
+                            Seamlessly actualize client-based users after out-of-the-box value.
+                            Globally embrace strategic data through frictionless expertise.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
+            </div>
+        </section>
+        <!--page header section end-->
+
+        <!--team section start-->
+        <section class="team-section ptb-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="section-heading text-center">
+                            <h5 class="h6 text-primary">Our Team</h5>
+                            <h2>The People Behind Quiety</h2>
+                            <p>
+                                Intrinsicly strategize cutting-edge functionalities before
+                                interoperable applications. Synergistically incubate extensive
+                                expertise through integrated intellectual capital.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">{% for teams in team %}
+                        <div class="team-single-wrap mt-5">
+                            <div class="team-img rounded-custom">
+                                <img src="{{teams.image.url}}" alt="team" class="img-fluid position-relative" />
+                                
+                            </div>
+                            <div class="team-info mt-4 text-center">
+                                <h5 class="h6 mb-1">{{teams.name}}</h5>
+                                <p class="text-muted small mb-0">{{teams.designation}}</p>
+                            </div>
+                        </div>{% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--team section end-->
+
+        <!--team section start-->
+        
+        
+        <!--team section end-->
+
+        {% endblock %}

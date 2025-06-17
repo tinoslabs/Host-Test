@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Tinos Software And Security Solutions LLP</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'asset/css/bootstrap.min.css' %}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{% static 'asset/css/pogo-slider.min.css' %}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'asset/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'asset/css/custom.css' %}">
+	<link rel="icon" href="{% static 'assets/img/favicon-tinos-16x16.png' %}" type="image/png">
+
+    
+
+	<style>
+		.navbar-brand img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		/* Adjust the logo for smaller screens */
+		@media (max-width: 768px) {
+			.navbar-brand img {
+				max-width: 120px; /* Adjust width as needed */
+				height: auto;
+			}
+		}
+		
+		@media (max-width: 576px) {
+			.navbar-brand img {
+				max-width: 100px; /* Further reduce width for extra small screens */
+				height: auto;
+			}
+		}
+	</style>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+	<!-- LOADER -->
+    <div id="preloader">
+		<div class="loader">
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start header -->
+	 <header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'assets/img/tinos.png' %}" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="{%url 'index' %}">Home</a></li>
+                        <li><a class="nav-link" href="{%url 'index' %}#about-us">About Us</a></li>
+                        <li><a class="nav-link" href="{% url 'service' %}">Service</a></li>
+						<li><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+                        <li><a class="nav-link" href="{% url 'project' %}">Portfolio</a></li>
+						<li><a class="nav-link" href="{% url 'career' %}">Careers</a></li>
+                        <li><a class="nav-link" href="{% url 'event' %}">Events</a></li>
+                        <li><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	</header> 
+
+
+   
+	
+	<div id="wish" class="about-box" style="padding-bottom: 0;">
+
+		
+<div class="about-a1" style="position: relative; padding: 50px 0; overflow: hidden;">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="{% static 'asset/video/v1.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-box">
+                    {% comment %} <h2 style="color: #fff;"> Merry Christmas </h2> {% endcomment %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="row align-items-center about-main-info">
+
+                    <!-- Dynamic Video Section -->
+                    {% comment %} <div class="col-lg-6 col-md-6 col-sm-12 text_align_center">
+                        <div class="christmas-frame">
+                            {% for ev in event %}
+                                {% if ev.event_video %}
+                                    <video width="100%" height="315" controls autoplay muted loop>
+                                        <source src="{{ ev.event_video.url }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                {% else %}
+                                    <p style="color: #fff;">No video available.</p>
+                                {% endif %}
+                            {% endfor %}
+
+                            <!-- Animated Decorations -->
+                            <div class="decorations">
+                                <div class="chocolate"></div>
+                                <div class="gift"></div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                    <div class="col-lg-6 col-md-6 col-sm-12 text_align_center">
+                        <div class="christmas-frame">
+                            {% for ev in event %}
+                                {% if ev.event_video %}
+                                    <video width="100%" height="315" controls autoplay muted loop playsinline>
+                                        <source src="{{ ev.event_video.url }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                {% else %}
+                                    <p style="color: #fff;">No video available.</p>
+                                {% endif %}
+                            {% endfor %}
+                    
+                            <!-- Animated Decorations -->
+                            <div class="decorations">
+                                <div class="chocolate"></div>
+                                <div class="gift"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Text and Image Section -->
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="col-lg-12">
+                            <div class="title-box">
+                                <h2 style="font-size:55px; color: #fff;"> Merry Christmas<br> & <br>Happy New Year</h2>
+                            </div>
+                        </div>
+						{% for ev in event %}
+							{% if ev.description %}
+							<p style="font-family: 'Parisienne', cursive; font-size: 1rem; line-height: 1.2; color: #fff;">
+								{{ev.description}}
+							</p>
+							{% else %}
+							<p style="font-family: 'Parisienne', cursive; font-size: 1rem; line-height: 1.2; color: #fff;">
+								May Your Christmas be filled with magical moments and your New Year With Endless Possibilities.
+							</p>
+							{% endif %}
+						{% endfor %}
+                        {% comment %} <p style="font-family: 'Parisienne', cursive; font-size: 1rem; line-height: 1.2; color: #fff;">
+                            May this festive season sparkle and shine. May all of your wishes and dreams come true, and may you feel this happiness all year round.
+                        </p> {% endcomment %}
+						{% comment %} <a href="#" class="hvr-radial-out button-theme">Join Us</a> {% endcomment %}
+						<a href="#contact" class="hvr-radial-out button-theme custom-button" style="align-items:center;">Join Us</a>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ {% comment %} <style>
+	.custom-button {
+		background-color: #ffffff; /* White background */
+        left: 220px; /* Move right */
+		color: #ff0000; /* Red font color */
+		border: 2px solid #ffffff; /* Optional: Red border for better visibility */
+		padding: 10px 20px; /* Adjust padding for size */
+		font-size: 16px; /* Adjust font size as needed */
+		font-weight: bold; /* Make the text bold */
+		text-transform: uppercase; /* Optional: Uppercase text */
+		text-decoration: none; /* Remove underline */
+		border-radius: 5px; /* Optional: Rounded corners */
+		display: inline-block; /* Ensure proper alignment */
+		transition: all 0.3s ease; /* Smooth transition for hover effects */
+	}
+	
+	/* Hover effect */
+	.custom-button:hover {
+		background-color: #ff0000; /* Change to red background on hover */
+		color: #ffffff; /* White font on hover */
+		border: 2px solid #ffffff; /* Maintain border */
+	}
+	
+</style>  {% endcomment %}
+
+<style>
+    .custom-button {
+        position: relative; /* Ensure proper positioning */
+        background-color: #ffffff; /* White background */
+        left: 220px; /* Adjust for default screen size */
+        color: #ff0000; /* Red font color */
+        border: 2px solid #ffffff; /* Optional: Red border for better visibility */
+        padding: 10px 20px; /* Maintain size */
+        font-size: 16px; /* Maintain size */
+        font-weight: bold; /* Make the text bold */
+        text-transform: uppercase; /* Optional: Uppercase text */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Optional: Rounded corners */
+        display: inline-block; /* Ensure proper alignment */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    /* Hover effect */
+    .custom-button:hover {
+        background-color: #ff0000; /* Change to red background on hover */
+        color: #ffffff; /* White font on hover */
+        border: 2px solid #ffffff; /* Maintain border */
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+        .custom-button {
+            left: 50%; /* Move to the center of the screen */
+            transform: translateX(-50%); /* Center align horizontally */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .custom-button {
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Ensure proper alignment */
+            top: 10px; /* Optional: Adjust vertical position */
+        }
+    }
+</style>
+
+
+{% comment %} <style>
+    /* Container styling for centering */
+    .button-container {
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        height: 100vh; /* Full viewport height */
+        background-color: #f7f7f7; /* Optional: Background for better visibility */
+    }
+
+    /* Button styling */
+    .custom-button {
+        background-color: #ffffff; /* White background */
+        color: #ff0000; /* Red font color */
+        border: 2px solid #ffffff; /* White border */
+        padding: 10px 20px; /* Adjust padding for size */
+        font-size: 16px; /* Adjust font size as needed */
+        font-weight: bold; /* Make the text bold */
+        text-transform: uppercase; /* Optional: Uppercase text */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Optional: Rounded corners */
+        display: inline-block; /* Ensure proper alignment */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+    
+    /* Hover effect */
+    .custom-button:hover {
+        background-color: #ff0000; /* Change to red background on hover */
+        color: #ffffff; /* White font on hover */
+        border: 2px solid #ffffff; /* Maintain border */
+    }
+</style> {% endcomment %}
+
+
+		
+				
+		<style>
+			/* Frame Styling */
+			.christmas-frame {
+				position: relative;
+				padding: 10px;
+				background: #fdf7e3; /* Light cream background */
+				border: 5px solid #b22222; /* Festive red border */
+				border-radius: 15px;
+				box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+				overflow: hidden;
+			}
+
+			/* Animated Decorations Container */
+			.decorations {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none; /* Prevent interaction */
+				overflow: hidden;
+			}
+
+			/* Chocolate Animation */
+			.chocolate {
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				background: url('images/chocolate.png') no-repeat center center / contain;
+				animation: float-chocolates 5s infinite linear;
+				opacity: 0.8;
+			}
+
+			/* Chocolate Animation Keyframes */
+			@keyframes float-chocolates {
+				0% {
+					top: -50px;
+					left: 10%;
+					transform: rotate(0deg);
+				}
+				50% {
+					top: 50%;
+					left: 30%;
+					transform: rotate(180deg);
+				}
+				100% {
+					top: 100%;
+					left: 90%;
+					transform: rotate(360deg);
+				}
+			}
+
+			/* Gift Animation */
+			.gift {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background: url('images/gift.png') no-repeat center center / contain;
+				animation: float-gifts 6s infinite ease-in-out;
+				opacity: 0.9;
+			}
+
+			/* Gift Animation Keyframes */
+			@keyframes float-gifts {
+				0% {
+					top: 100%;
+					left: 80%;
+					transform: rotate(0deg);
+				}
+				50% {
+					top: 40%;
+					left: 60%;
+					transform: rotate(-180deg);
+				}
+				100% {
+					top: -50px;
+					left: 20%;
+					transform: rotate(-360deg);
+				}
+			}
+
+		</style>
+		
+		
+
+        <style>
+            .christmas-wish {
+                position: relative;
+                background: url('https://example.com/christmas-bg.jpg') no-repeat center center/cover;
+                padding: 50px;
+                text-align: center;
+                color: #fff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+            }
+            
+            .christmas-wish h1 {
+                font-family: 'Great Vibes', cursive;
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+            
+            .christmas-wish p {
+                font-size: 1.2rem;
+                max-width: 600px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+            
+            .christmas-wish button {
+                margin-top: 20px;
+                background-color: #e91327;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1rem;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .christmas-wish button:hover {
+                background-color: #d10d1f;
+            }
+            
+        </style>
+
+        <div id="contact" class="contact-box" id="replay" style="margin-top: 30px; background: #f7f7f7"; >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-box">
+                            <h2>Replay To Us </h2>
+                        </div>
+                    </div>
+                </div>
+				{% if messages %}
+					<div class="alert alert-success" id="thank-you-message" role="alert" style="display: none;">
+						{% for message in messages %}
+							{{ message }}
+						{% endfor %}
+					</div>
+				{% endif %}
+                <div class="row">
+                    
+                    <div class="col-lg-7 col-sm-7 col-xs-12">
+                      <div class="contact-block">
+                        
+                        <form  method="POST"  class="register-form" action="{% url 'event' %}">{% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    {% comment %} <label for="firstName" class="mb-1">First name</label> {% endcomment %}
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="firstName" name="first_name" required placeholder="First name" aria-label="First name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    {% comment %} <label for="lastName" class="mb-1">Last name</label> {% endcomment %}
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last name" aria-label="Last name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    {% comment %} <label for="phone" class="mb-1">Phone <span class="text-danger">*</span></label> {% endcomment %}
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="phone" name="phone" required placeholder="Phone" aria-label="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    {% comment %} <label for="email" class="mb-1">Email<span class="text-danger">*</span></label> {% endcomment %}
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email" aria-label="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    {% comment %} <label for="yourMessage" class="mb-1">Message <span class="text-danger">*</span></label> {% endcomment %}
+                                    <div class="input-group mb-3">
+                                        <textarea class="form-control" id="yourMessage" name="message" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %} <button type="submit" class="btn btn-primary mt-4" >Sent Message</button> {% endcomment %}
+                            <button type="submit" class="btn btn-primary mt-4" style="background-color: red; border-color:#e91327;">Send Message</button>
+                        </form>
+                        
+                      </div>
+                    </div>
+                    
+                    
+    
+                    <div class="col-lg-5 col-sm-5 col-xs-12">
+                        <div class="left-contact">
+                            <div class="media cont-line">
+                                <div class="media-left icon-b">
+                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                </div>
+                                <div class="media-body dit-right">
+                                    <h4>Address</h4>
+                                    <p>Tinos Software And Security Solutions LLP, 1'st floor Palathinkal Building, Kochapilly road, Palarivattom</p>
+                                </div>
+                            </div>
+                            <div class="media cont-line">
+                                <div class="media-left icon-b">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="media-body dit-right">
+                                    <h4>Email</h4>
+                                    <a href="mailto:support@tinos.co.in">support@tinos.co.in</a><br>
+                                   
+                                </div>
+                            </div>
+                            <div class="media cont-line">
+                                <div class="media-left icon-b">
+                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="media-body dit-right">
+                                    <h4>Phone Number</h4>
+                                    <a href="tel:+917907358458">Call +91 7907358458</a><br>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+		
+	
+	
+	
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2024 <a href="{% url 'index' %}">Tinos Software & Security Solutions LLP</a> </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+
+	<!-- ALL JS FILES -->
+     <!-- EVENTS -->
+	<script src="{% static 'asset/js/jquery.min.js' %}"></script>
+	<script src="{% static 'asset/js/popper.min.js' %}"></script>
+	<script src="{% static 'asset/js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'asset/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'asset/js/jquery.pogo-slider.min.js' %}"></script> 
+	<script src="{% static 'asset/js/slider-index.js' %}"></script>
+	<script src="{% static 'asset/js/smoothscroll.js' %}"></script>
+	<script src="{% static 'asset/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'asset/js/contact-form-script.js' %}"></script>
+	<script src="{% static 'asset/js/isotope.min.js' %}"></script>	
+	<script src="{% static 'asset/js/images-loded.min.js' %}"></script>	
+    <script src="{% static 'asset/js/custom.js' %}"></script>
+</body>
+</html>

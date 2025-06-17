@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <!--required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--twitter og-->
+    <meta name="twitter:site" content="@themetags">
+    <meta name="twitter:creator" content="@themetags">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tinos Software And Security Solutions LLP - We Are Creative An Innovative IT Solutions and Cyber Security Company.">
+    <meta name="twitter:description" content="Tinos Software And Security Solutions LLP, Dive into the world of innovation as this company revolutionizes industries with groundbreaking solutions.
+    all departments work properly together.">
+    <meta name="twitter:image" content="#">
+
+    <!--facebook og-->
+    <meta property="og:url" content="#">
+    <meta name="twitter:title" content="Tinos Software And Security Solutions LLP - We Are Creative An Innovative IT Solutions and Cyber Security Company.">
+    <meta property="og:description" content="Tinos Software And Security Solutions LLP, Dive into the world of innovation as this company revolutionizes industries with groundbreaking solutions.
+    all departments work properly together.">
+    <meta property="og:image" content="#">
+    <meta property="og:image:secure_url" content="#">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+   
+
+    <!--favicon icon-->
+    <link rel="icon" href="{% static 'assets/img/favicon-tinos-16x16.png' %}" type="image/png">
+  
+
+    <!--title-->
+    <title>Tinos Software And Security Solutions LLP</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+    <!-- Font -->
+
+    <!--build:css-->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.min.css' %}">
+    <!-- endbuild -->
+
+    <!--custom css start-->
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+    
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-XXXXX" crossorigin="anonymous">
+
+        <!-- Latest Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-XXXXX" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Latest Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha384-XXXXX" crossorigin="anonymous"></script>
+
+        <!-- Latest jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-XXXXX" crossorigin="anonymous"></script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WQ35RXSM');
+    </script>
+</head>
+    <!--custom css end-->
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ35RXSM"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <!--preloader start-->
+    <div id="preloader" class="bg-light-subtle">
+        <div class="preloader-wrap">
+            <img src="{% static 'assets/img/tinos.png' %}" alt="logo" class="img-fluid preloader-icon">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <!--main content wrapper start-->
+    <div class="main-wrapper">
+
+        <!--header section start-->
+        <header class="main-header w-100 z-10">
+            <nav class="navbar navbar-expand-xl navbar-light sticky-header">
+                <div class="container d-flex align-items-center justify-content-lg-between position-relative">
+                    <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
+                        <img src="{% static 'assets/img/tinos.png' %}" alt="logo" class="img-fluid logo-white" />
+                        <img src="{% static 'assets/img/tinos.png' %}" alt="logo" class="img-fluid logo-color" />
+                    </a>
+
+                    <a class="navbar-toggler position-absolute right-0 border-0" href="#offcanvasWithBackdrop" role="button">
+                        <i class="flaticon-menu"
+                           data-bs-toggle="offcanvas"
+                           data-bs-target="#offcanvasWithBackdrop"
+                           aria-controls="offcanvasWithBackdrop"></i>
+                    </a>
+                    <div class="clearfix"></div>
+                    <div class="collapse navbar-collapse justify-content-center">
+                        <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+                           
+                            <li><a href="{%url 'index' %}" class="nav-link">Home</a></li>
+                            <li><a href="{%url 'index' %}#about-us" class="nav-link">About Us</a></li>
+                            <li><a href="{% url 'service' %}" class="nav-link">Services</a></li>
+                            <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                            <li><a href="{% url 'project' %}" class="nav-link">Portfolio</a></li>
+                            <li><a href="{% url 'career' %}" class="nav-link">Careers</a></li>
+                            <li><a href="{% url 'event' %}" class="nav-link">Events</a></li>
+                            
+                            <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                            <!-- <li class="nav-item nav-category">Chatbot Messages</li> -->
+                        </ul>
+                    </div>
+
+                    <div class="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
+                        <a href="javascript:void(0)" class="btn btn-link p-1 tt-theme-toggle">
+                            <div class="tt-theme-light" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Light"><i class="flaticon-sun-1 fs-lg"></i></div>
+                            <div class="tt-theme-dark" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Dark"><i class="flaticon-moon-1 fs-lg"></i></div>
+                        <!-- </a> <a href="login.html" class="btn btn-link text-decoration-none me-2">Sign In</a> -->
+                        <a href="{% url 'verification' %}" class="btn btn-primary ms-5">Certificate Verification</a>
+                    </div>
+                </div>
+            </nav>
+            <!--offcanvas menu start-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWithBackdrop">
+                <div class="offcanvas-header d-flex align-items-center mt-4">
+                    <a href="{% url 'index' %}" class="d-flex align-items-center mb-md-0 text-decoration-none">
+                        <img src="{% static 'assets/img/tinos.png' %}" alt="logo" class="img-fluid ps-2" />
+                    </a>
+                    <button type="button" class="close-btn text-danger" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="flaticon-cancel"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+                        
+                        <li><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                        <li><a href="{%url 'index' %}#about-us" class="nav-link">About Us</a></li>
+                        <li><a href="{% url 'service' %}" class="nav-link">Services</a></li>
+                        <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                        <li><a href="{% url 'career' %}" class="nav-link">Career</a></li>
+                        
+                        <li><a href="{% url 'project' %}" class="nav-link">Portfolio</a></li>
+                        <li><a href="{% url 'event' %}" class="nav-link">Events</a></li>
+                        <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="action-btns mt-4 ps-3">
+                        <!-- <a href="login.html" class="btn btn-outline-primary me-2">Sign In</a> -->
+                        <a href="{% url 'verification' %}" class="btn btn-primary">Certificate Verification</a>
+                    </div>
+                </div>
+            </div>
+            <!--offcanvas menu end-->
+        </header> <!--header section end-->
+
+        <!--page header section start-->
+        
+        {% block content%}
+        {% endblock %}
+
+        <div class="botIcon">
+            <div class="botIconContainer">
+                <div class="iconInner" style="animation: jump 1s infinite alternate; font-size: 24px;">
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="Layout Layout-open Layout-expand Layout-right">
+                <div class="Messenger_messenger">
+                    <div class="Messenger_header">
+                        <h4 class="Messenger_prompt" style="color: aliceblue;">How can we help you?</h4> <span class="chat_close_icon"><i class="fa fa-window-close" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="Messenger_content">
+                        <div class="Messages">
+                            <div class="Messages_list"></div>
+                        </div>
+                        <form id="messenger">
+                            {% csrf_token %}
+                            <div class="Input Input-blank">
+        
+                                <input style="max-width: 100%; width:220px;overflow-wrap:break-word;white-space: pre-wrap;" name="msg" class="Input_field" placeholder="Send a message...">
+                                <button type="submit" class="Input_button Input_button-send">
+                                    <div class="Icon">
+                                        <svg viewBox="1496 193 57 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Group-9-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1523.000000, 220.000000) rotate(-270.000000) translate(-1523.000000, -220.000000) translate(1499.000000, 193.000000)">
+                                                <path d="M5.42994667,44.5306122 L16.5955554,44.5306122 L21.049938,20.423658 C21.6518463,17.1661523 26.3121212,17.1441362 26.9447801,20.3958097 L31.6405465,44.5306122 L42.5313185,44.5306122 L23.9806326,7.0871633 L5.42994667,44.5306122 Z M22.0420732,48.0757124 C21.779222,49.4982538 20.5386331,50.5306122 19.0920112,50.5306122 L1.59009899,50.5306122 C-1.20169244,50.5306122 -2.87079654,47.7697069 -1.64625638,45.2980459 L20.8461928,-0.101616237 C22.1967178,-2.8275701 25.7710778,-2.81438868 27.1150723,-0.101616237 L49.6075215,45.2980459 C5.08414042,47.7885641 49.1422456,50.5306122 46.3613062,50.5306122 L29.1679835,50.5306122 C27.7320366,50.5306122 26.4974445,49.5130766 26.2232033,48.1035608 L24.0760553,37.0678766 L22.0420732,48.0757124 Z" id="sendicon" fill="#96AAB4" fill-rule="nonzero"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        
+        <footer class="footer-section">
+           
+            <div class="footer-top  bg-gradient text-white ptb-120" style="background: url('static/assets/img/page-header-bg.svg')no-repeat bottom right">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-8 col-lg-4 mb-md-4 mb-lg-0">
+                            <div class="footer-single-col">
+                                <div class="footer-single-col mb-4">
+                                    <img src="{% static 'assets/img/tinos.png' %}" alt="logo" class="img-fluid logo-white">
+                                    <img src="{% static 'assets/img/tinos.png' %}" alt="logo" class="img-fluid logo-color">
+                                </div>
+                                <p>Dive into the world of innovation as this company revolutionizes industries with groundbreaking solutions.
+                                    all departments work properly together.</p>
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-7 mt-4 mt-md-0 mt-lg-0">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                    <div class="footer-single-col">
+                                        <h3>Company</h3>
+                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                            <li><a href="{% url 'index' %}" class="text-decoration-none">Home</a></li>
+                                            <li><a href="{%url 'index' %}#about-us" class="text-decoration-none">About Us</a></li>
+                                            <li><a href="{% url 'service' %}" class="text-decoration-none">Services</a></li>
+                                            <li><a href="{% url 'career' %}" class="text-decoration-none">Careers</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                    <div class="footer-single-col">
+                                        <h3>Useful Links</h3>
+                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                            <li><a href="{% url 'project' %}" class="text-decoration-none">Portfolio</a></li>
+                                            
+                                            <li><a href="{% url 'privacy_policy' %}" class="text-decoration-none">Privacy Policy</a></li>
+                                            <li><a href="{% url 'terms_and_conditions' %}" class="text-decoration-none">Terms And Conditions</a></li>
+                                            <li><a href="{% url 'verification' %}" class="text-decoration-none">Certificate Verification</a></li>
+                                            
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                    <div class="footer-single-col">
+                                        <h3>Contact</h3>
+                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                            <li><a href="{% url 'contact' %}" class="text-decoration-none">Contact</a></li>
+                                            <li><a href="testimonial" class="text-decoration-none">Testimonial</a></li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer top end-->
+
+            <!--footer bottom start-->
+            <div class="footer-bottom  bg-gradient text-white py-4">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-md-7 col-lg-7">
+                            <div class="copyright-text">
+                                <p class="mb-lg-0 mb-md-0">&copy; 2024 Tinos Rights Reserved. Designed By <a href="https://tinos.co.in/" class="text-decoration-none">Tinos Software And Security Solutions LLP</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <div class="footer-single-col text-start text-lg-end text-md-end">
+                                <ul class="list-unstyled list-inline footer-social-list mb-0">
+                                    <li class="list-inline-item"><a href="https://www.facebook.com/tinoscyberlabz/"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/tinossoftware/?utm_source=qr&igshid=YzU1NGVlODEzOA%3D%3D"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://in.linkedin.com/company/tinossoftware"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer bottom end-->
+        </footer>
+        <!--footer section end--> <!--footer section end-->
+    </div>
+
+
+   
+
+    
+    
+    </body>
+
+    <style>
+        @keyframes jump {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+            /* chatbot code */
+            
+            @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+            
+            /* Chatbot */
+            .botIcon {bottom: 15px;left: 15px;position: fixed;z-index: 9999;}
+            .iconInner {-webkit-align-items: center;-ms-align-items: center;align-items: center;background: #a64bf4;background: -webkit-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);background: -o-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);background: -moz-linear-gradient(to left,#00dbde, #fc00ff, #00dbde,#fc00ff);background: linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);background-position: 50%;background-size: 300%;border-radius: 50%;color: #fff;cursor: pointer;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;font-size: 1.7em;height: 2em;justify-content: center;width: 2em;}
+            .botSubject, .messages, .showBotSubject .botIconContainer, .showMessenger .botIconContainer {display: none;}
+            
+            .botIcon .iconInner {
+                -webkit-align-items: center;
+                -ms-align-items: center;
+                align-items: center;
+                background: #3f51b5; /* Blue color */
+                background: -webkit-linear-gradient(to left, #0232a0, #0232a0, #0232a0, #0232a0); 
+                background: -o-linear-gradient(to left, #0232a0, #0232a0, #0232a0, #0232a0); 
+                background: -moz-linear-gradient(to left,#0232a0, #0232a0, #0232a0,#0232a0); 
+                background: linear-gradient(to left, #0232a0, #0232a0, #0232a0, #0232a0); 
+                background-position: 50%;
+                background-size: 300%;
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                font-size: 1.7em;
+                height: 2em;
+                justify-content: center;
+                width: 2em;
+            }
+            
+            .botIcon .Messages, .botIcon .Messages_list {-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1;}
+            .chat_close_icon {color: #fff;cursor: pointer;font-size: 16px;position: absolute;right: 12px;z-index: 9;}
+            .chat_on {background-color: #8a57cf;bottom: 20px;border-radius: 50%;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;color: #fff;cursor: pointer;display: block;height: 45px;padding: 9px;position: fixed;right: 15px;text-align: center;width: 45px;z-index: 10;}
+            .chat_on_icon {color: #fff;font-size: 25px;text-align: center;}
+            .botIcon .Layout {-webkit-animation: appear .15s cubic-bezier(.25, .25, .5, 1.1);-ms-animation: appear .15s cubic-bezier(.25, .25, .5, 1.1);animation: appear .15s cubic-bezier(.25, .25, .5, 1.1);-webkit-animation-fill-mode: forwards;-ms-animation-fill-mode: forwards;animation-fill-mode: forwards;background-color: rgb(63, 81, 181);bottom: 20px;border-radius: 10px;box-shadow: 5px 0 20px 5px rgba(0, 0, 0, .1);box-sizing: content-box !important;color: rgb(255, 255, 255);display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: end;-webkit-justify-content: flex-end;-ms-flex-pack: end;justify-content: flex-end;max-height: 30px;max-width: 300px;min-width: 50px;opacity: 0;pointer-events: auto;position: fixed;-webkit-transition: right .1s cubic-bezier(.25, .25, .5, 1), bottom .1s cubic-bezier(.25, .25, .5, 1), min-width .2s cubic-bezier(.25, .25, .5, 1), max-width .2s cubic-bezier(.25, .25, .5, 1), min-height .2s cubic-bezier(.25, .25, .5, 1), max-height .2s cubic-bezier(.25, .25, .5, 1), border-radius 50ms cubic-bezier(.25, .25, .5, 1) .15s, background-color 50ms cubic-bezier(.25, .25, .5, 1) .15s, color 50ms cubic-bezier(.25, .25, .5, 1) .15s;-ms-transition: right .1s cubic-bezier(.25, .25, .5, 1), bottom .1s cubic-bezier(.25, .25, .5, 1), min-width .2s cubic-bezier(.25, .25, .5, 1), max-width .2s cubic-bezier(.25, .25, .5, 1), min-height .2s cubic-bezier(.25, .25, .5, 1), max-height .2s cubic-bezier(.25, .25, .5, 1), border-radius 50ms cubic-bezier(.25, .25, .5, 1) .15s, background-color 50ms cubic-bezier(.25, .25, .5, 1) .15s, color 50ms cubic-bezier(.25, .25, .5, 1) .15s;transition: right .1s cubic-bezier(.25, .25, .5, 1), bottom .1s cubic-bezier(.25, .25, .5, 1), min-width .2s cubic-bezier(.25, .25, .5, 1), max-width .2s cubic-bezier(.25, .25, .5, 1), min-height .2s cubic-bezier(.25, .25, .5, 1), max-height .2s cubic-bezier(.25, .25, .5, 1), border-radius 50ms cubic-bezier(.25, .25, .5, 1) .15s, background-color 50ms cubic-bezier(.25, .25, .5, 1) .15s, color 50ms cubic-bezier(.25, .25, .5, 1) .15s;z-index: 999999999;}
+            .botIcon .Layout-open {border-radius: 10px;color: #fff;height: 500px;max-height: 500px;max-width: 300px;overflow: hidden;-webkit-transition: right .1s cubic-bezier(.25, .25, .5, 1), bottom .1s cubic-bezier(.25, .25, .5, 1.1), min-width .2s cubic-bezier(.25, .25, .5, 1.1), max-width .2s cubic-bezier(.25, .25, .5, 1.1), max-height .2s cubic-bezier(.25, .25, .5, 1.1), min-height .2s cubic-bezier(.25, .25, .5, 1.1), border-radius 0ms cubic-bezier(.25, .25, .5, 1.1), background-color 0ms cubic-bezier(.25, .25, .5, 1.1), color 0ms cubic-bezier(.25, .25, .5, 1.1);-ms-transition: right .1s cubic-bezier(.25, .25, .5, 1), bottom .1s cubic-bezier(.25, .25, .5, 1.1), min-width .2s cubic-bezier(.25, .25, .5, 1.1), max-width .2s cubic-bezier(.25, .25, .5, 1.1), max-height .2s cubic-bezier(.25, .25, .5, 1.1), min-height .2s cubic-bezier(.25, .25, .5, 1.1), border-radius 0ms cubic-bezier(.25, .25, .5, 1.1), background-color 0ms cubic-bezier(.25, .25, .5, 1.1), color 0ms cubic-bezier(.25, .25, .5, 1.1);transition: right .1s cubic-bezier(.25, .25, .5, 1), bottom .1s cubic-bezier(.25, .25, .5, 1.1), min-width .2s cubic-bezier(.25, .25, .5, 1.1), max-width .2s cubic-bezier(.25, .25, .5, 1.1), max-height .2s cubic-bezier(.25, .25, .5, 1.1), min-height .2s cubic-bezier(.25, .25, .5, 1.1), border-radius 0ms cubic-bezier(.25, .25, .5, 1.1), background-color 0ms cubic-bezier(.25, .25, .5, 1.1), color 0ms cubic-bezier(.25, .25, .5, 1.1);width: 100%;}
+            .botIcon .Layout-expand {display: none;height: 400px;max-height: 100vh;min-height: 300px;}
+            .showBotSubject.botIcon .Layout-expand {display: block;}
+            .botIcon .Layout-mobile {bottom: 10px}
+            .botIcon .Layout-mobile.Layout-open {min-width: calc(100% - 20px);width: calc(100% - 20px);}
+            .botIcon .Layout-mobile.Layout-expand {border-radius: 0 !important;bottom: 0;height: 100%;min-height: 100%;min-width: 100%;width: 100%;}
+            .botIcon .Messenger_messenger {height: 100%;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;position: relative;width: 100%;}
+            .botIcon .Messenger_header, .botIcon .Messenger_messenger {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
+            .botIcon .Messenger_header {-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;background-color: rgb(22, 46, 98);color: rgb(255, 255, 255);-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;height: 40px;padding-left: 10px;padding-right: 40px;}
+            
+            .botIcon .Messenger_header h4 {-webkit-animation: slidein .15s .3s;-ms-animation: slidein .15s .3s;animation: slidein .15s .3s;-webkit-animation-fill-mode: forwards;-ms-animation-fill-mode: forwards;animation-fill-mode: forwards;font-size: 16px;opacity: 0;}
+            .botIcon .Messenger_prompt {font-size: 16px;font-weight: 400;line-height: 18px;margin: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+            .botIcon .Messenger_content {background-color: #fff;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1;height: 80px;}
+            .botIcon .Messages {background-color: #fff;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-shrink: 1;-ms-flex-negative: 1;flex-shrink: 1;overflow-x: hidden;overflow-y: auto;padding: 10px;position: relative;-webkit-overflow-scrolling: touch;}
+            .botIcon .Input {background-color: #fff;border-top: 1px solid #e6ebea;color: #96aab4;-webkit-box-flex: 0;-webkit-flex-grow: 0;-ms-flex-positive: 0;flex-grow: 0;-webkit-flex-shrink: 0;-ms-flex-negative: 0;flex-shrink: 0;padding-bottom: 15px;padding-top: 17px;position: relative;width: 100%;}
+            .botIcon .Input-blank .Input_field {max-height: 20px;}
+            .botIcon .Input_field {background-color: transparent;border: none;outline: none;padding-left: 20px;padding-right: 45px;resize: none;width: 100%;font-size: 14px;line-height: 20px;min-height: 20px !important;}
+            .botIcon .Input_button-emoji {right: 45px;}
+            .botIcon .Input_button {background-color: transparent;border: none;bottom: 15px;cursor: pointer;height: 25px;outline: none;padding: 0;position: absolute;width: 25px;}
+            .botIcon .Input_button-send {right: 15px;}
+            .botIcon .Input-emoji .Input_button-emoji .Icon, .botIcon .Input_button:hover .Icon {-webkit-transform: scale(1.1);-ms-transform: scale(1.1);transform: scale(1.1);-webkit-transition: all .1s ease-in-out;-ms-transition: all .1s ease-in-out;transition: all .1s ease-in-out;}
+            .botIcon .Input-emoji .Input_button-emoji .Icon path, .botIcon .Input_button:hover .Icon path {fill: #2c2c46;}
+            .Icon svg {height: auto;width: 100%;}
+            
+            .msg {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
+            .msg.user {-webkit-box-direction: row-reverse;-webkit-flex-direction: row-reverse;-ms-flex-direction: row-reverse;flex-direction: row-reverse;}
+            .msg + .msg {margin-top: 15px;}
+            span.responsText {color: #000;display: inline-block;margin-left: 10px;vertical-align: top;max-width: calc(100% - 50px);}
+            .msg.user span.responsText {margin-left: 0;margin-right: 10px;}
+            span.avtr {display: inline-block;width: 30px;}
+            span.avtr figure {background-color: #ccc;background-position: center;background-repeat: no-repeat;background-size: cover;border-radius: 50%;display: block;margin: 0;padding-bottom: 100%;}
+            
+            @-webkit-keyframes appear {
+                0% {opacity: 0;-webkit-transform: scale(0);transform: scale(0);}
+                100% {opacity: 1;-webkit-transform: scale(1);transform: scale(1);}
+            }
+            @-ms-keyframes appear {
+                0% {opacity: 0;-ms-transform: scale(0);transform: scale(0);}
+                100% {opacity: 1;-ms-transform: scale(1);transform: scale(1);}
+            }
+            @keyframes appear {
+                0% {opacity: 0;-webkit-transform: scale(0);transform: scale(0);}
+                100% {opacity: 1;-webkit-transform: scale(1);transform: scale(1);}
+            }
+            @-webkit-keyframes slidein {
+                0% {opacity: 0;-webkit-transform: translateX(10px);transform: translateX(10px);}
+                100% {opacity: 1;-webkit-transform: translateX(0);transform: translateX(0);}
+            }
+            @-ms-keyframes slidein {
+                0% {opacity: 0;-ms-transform: translateX(10px);transform: translateX(10px);}
+                100% {opacity: 1;-ms-transform: translateX(0);transform: translateX(0);}
+            }
+            @keyframes slidein {
+                0% {opacity: 0;-webkit-transform: translateX(10px);transform: translateX(10px);}
+                100% {opacity: 1;-webkit-transform: translateX(0);transform: translateX(0);}
+            }
+            
+            @media only screen and (max-width: 412px) {
+                .botIcon .Layout-open {width: 250px;}
+            }
+    
+            .single-logo img {
+            max-height: 100px; /* Adjust the maximum height as needed */
+        }
+    
+        #preloader .preloader-icon {
+            height: 40px; /* Adjust the height as needed */
+        }
+            </style>
+            
+                    <script>
+                        document.getElementById('showAllItemsBtn').addEventListener('click', function() {
+                            var allItemsList = document.getElementById('allItemsList');
+                            if (allItemsList.style.display === 'block') {
+                                allItemsList.style.display = 'none';
+                            } else {
+                                allItemsList.style.display = 'block';
+                            }
+                        });
+    
+                        
+                    </script>
+                    
+        <!--build:js-->
+       
+        <!--endbuild-->
+
+        
+    <script src="{% static 'assets/js/vendors/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/parallax.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/aos.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/massonry.min.js' %}"></script>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+    <script src="{% static 'assets/js/carousel.js' %}"></script>
+    <script src="{% static 'assets/js/messenger.js' %}"></script>
+        
+
+    
+    
+    </html>
+    

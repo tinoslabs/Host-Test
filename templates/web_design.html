@@ -1,0 +1,505 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+     
+
+        <section class="hero-section text-white hero-ten" style="background: url('static/assets/img/dark-blue-plain.jpg')no-repeat center center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="hero-content-wrap mt-5 mt-lg-0 mt-xl-0">
+                            <h1 class="fw-bold display-5 text-white">
+                                Web Design
+                            </h1>
+                            <p class="lead">
+                                Crafting user-centric web layouts that are both aesthetically pleasing and easy to navigate.
+                            </p>
+                            <div class="action-btn mt-5 align-items-center d-block d-sm-flex d-lg-flex d-md-flex">
+                                <a href="{% url 'service' %}" class="btn btn-primary me-3">Discover More</a>
+                                {% for video in youtube_video %}
+                                {% if video.url %}
+                                <a href="{{ video.url }}" target="_blank" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn mt-3 mt-lg-0 mt-md-0">
+                                    <i class="fas fa-play"></i> Watch Demo
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8 mt-5">
+                        <div class="hero-img position-relative circle-shape-images">
+                            <img src="{% static 'assets/img/3553.png' %}"alt="hero img" class="img-fluid position-relative z-5" />
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="cyber-down-btn text-center position-relative d-none d-lg-block">
+                    <a href="#cyber-about" class="text-primary">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div> -->
+            </div>
+        </section>
+
+        <!--feature promo start-->
+         <!--feature promo end-->
+         <section class="feature-tab-section ptb-120 bg-light-subtle">
+            <div class="container">
+                <div class="row justify-content-center align-content-center">
+                    <div class="col-md-10 col-lg-6">
+                        <div class="section-heading text-center">
+                            <h4 class="h5 text-primary">Features</h4>
+                            <h2>Advanced Web Design Solutions</h2>
+                            <p>Explore the powerful features of our advanced web design solutions crafted to enhance your online presence and business success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav justify-content-center feature-tab-list-2 mb-0" id="nav-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-selected="false">
+                                    Responsive Design
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-selected="false">
+                                    E-Commerce Solutions
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" role="tab" aria-selected="false">
+                                    Custom Web Applications
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade pt-60 active show" id="tab-1" role="tabpanel">
+                                <div class="row justify-content-center align-items-center justify-content-around">
+                                    <div class="col-lg-5">
+                                        <div class="feature-tab-info">
+                                            <h3>Responsive Design</h3>
+                                            <p>At Tinos, we specialize in creating responsive web designs that adapt seamlessly to various devices and screen sizes. Our websites are optimized for mobile, tablet, and desktop experiences, ensuring maximum accessibility and user engagement.</p>
+                                            <p>From fluid layouts to flexible images and media queries, we employ the latest techniques in responsive design to deliver exceptional user experiences across all platforms.</p>
+                                            <a href="{% url 'service' %}" class="read-more-link text-decoration-none mt-4 d-block">Explore Our Services
+                                                <i class="fas fa-arrow-right ms-2"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <img src="{% static 'assets/img/7557.png' %}" alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade pt-60" id="tab-2" role="tabpanel">
+                                <div class="row justify-content-center align-items-center justify-content-around">
+                                    <div class="col-lg-5">
+                                        <img src="{% static 'assets/img/2723.png' %}"  alt="feature tab" class="img-fluid mb-4 mb-lg-0 mb-xl-0">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="feature-tab-info">
+                                            <h3>E-Commerce Solutions</h3>
+                                            <p>Transform your online store with our comprehensive e-commerce solutions. From user-friendly interfaces to secure payment gateways, we provide end-to-end e-commerce development services tailored to your business needs.</p>
+                                            <p>With our expertise in platforms like Shopify, WooCommerce, and Magento, we help businesses of all sizes create seamless and scalable online shopping experiences that drive sales and customer satisfaction.</p>
+                                            <a href="{% url 'service' %}" class="read-more-link text-decoration-none mt-4 d-block">Explore Our Services
+                                                <i class="fas fa-arrow-right ms-2"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade pt-60" id="tab-3" role="tabpanel">
+                                <div class="row justify-content-center align-items-center justify-content-around">
+                                    <div class="col-lg-5">
+                                        <div class="feature-tab-info">
+                                            <h3>Custom Web Applications</h3>
+                                            <p>Unlock new possibilities for your business with our custom web application development services. Whether you need a CRM, CMS, or a bespoke solution tailored to your unique requirements, we have the expertise to bring your vision to life.</p>
+                                            <p>Our team of developers utilizes the latest technologies and best practices to build robust, scalable, and secure web applications that streamline processes, enhance productivity, and drive business growth.</p>
+                                            <a href="{% url 'service' %}" class="read-more-link text-decoration-none mt-4 d-block">Explore Our Services
+                                                <i class="fas fa-arrow-right ms-2"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <img src="{% static 'assets/img/4554.png' %}"  alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+   <!--feature tab section start-->
+<section class="feature-section-two ptb-120">
+    <div class="container">
+        <div class="row align-items-center justify-content-lg-between justify-content-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="feature-content-wrap">
+                    <div class="section-heading">
+                        <h2>Expert Web Design Services</h2>
+                        <p>Explore our comprehensive web design solutions tailored to meet your business needs and drive online success.</p>
+                    </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-start mb-4">
+                            <div class="icon-box bg-primary rounded me-4">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div class="icon-content">
+                                <h3 class="h5">Custom Development</h3>
+                                <p>We specialize in custom web development, crafting bespoke solutions tailored to your unique requirements. From dynamic websites to complex web applications, we bring your ideas to life with clean, efficient code and intuitive user interfaces.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-4">
+                            <div class="icon-box bg-danger rounded me-4">
+                                <i class="fas fa-mobile-alt text-white"></i>
+                            </div>
+                            <div class="icon-content">
+                                <h3 class="h5">Responsive Design</h3>
+                                <p>Ensure a seamless user experience across all devices with our responsive web design services. Our websites are optimized for mobile, tablet, and desktop, providing consistent functionality and performance across platforms.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-4 mb-lg-0">
+                            <div class="icon-box bg-dark rounded me-4">
+                                <i class="fas fa-shopping-cart text-white"></i>
+                            </div>
+                            <div class="icon-content">
+                                <h3 class="h5">E-Commerce Solutions</h3>
+                                <p>Drive sales and expand your online business with our e-commerce development services. Whether you're launching a new store or upgrading an existing platform, we create secure, scalable e-commerce solutions that maximize revenue and enhance customer experience.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+                <div class="feature-img-wrap">
+                    <img src="{% static 'assets/img/feature-hero-img.svg' %}" alt="feature image" class="img-fluid rounded-custom">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--feature tab section end-->
+
+
+<section class="why-choose-us pt-60 pb-120">
+    <div class="container">
+        <div class="row justify-content-lg-between justify-content-center align-items-center">
+            <div class="col-lg-5 col-md-7 order-1 order-lg-0">
+                <div class="why-choose-img position-relative">
+                    <img src="{% static 'assets/img/7227.png' %}" class="img-fluid" alt="web design image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 order-0 order-lg-1">
+                <div class="why-choose-content">
+                    <div class="mb-32">
+                        <h2>Why Choose Our Web Design Services?</h2>
+                        <p>Discover the benefits of partnering with us for your web design needs.</p>
+                    </div>
+                    <ul class="list-unstyled d-flex flex-wrap list-two-col">
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Customized Solutions</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Responsive Design</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>E-Commerce Expertise</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Scalability & Flexibility</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Security & Compliance</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Timely Delivery</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Professional Support</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Competitive Pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--feature tab section end-->
+
+
+        <!--cat start-->
+        <section class="cta-section bg-dark text-white ptb-120 position-relative overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="position-relative z-5">
+                            <h2>Actionable Reports to Grow your Business</h2>
+                            <p>Conveniently syndicate client-centric users for transparent scenarios. Uniquely evolve
+                                partnerships rather than cross-platform interfaces.</p>
+                            <a href="{% url 'contact' %}" class="btn btn-primary mt-4">Get Start Now</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row align-items-center justify-content-center position-relative z-2">
+                            <div class="col-md-6">
+                                <div class="cta-card rounded-custom text-center shadow p-5 bg-white my-4">
+                                    <h3 class="display-5 fw-bold">9/10</h3>
+                                    <p class="mb-0">Overall our customer satisfaction score</p>
+                                </div>
+                                <div class="cta-card rounded-custom text-center shadow p-5 bg-white my-4">
+                                    <h3 class="display-5 fw-bold">15K+</h3>
+                                    <p class="mb-0">Happy customer in worldwide</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="cta-card rounded-custom text-center shadow p-5 bg-white">
+                                    <h3 class="display-5 fw-bold">95%</h3>
+                                    <p class="mb-0">Our Customer customer satisfaction score</p>
+                                </div>
+                            </div>
+                            <div class="bg-circle rounded-circle position-absolute z--1">
+                                <img src="{% static 'assets/img/shape/blob.svg' %}" alt="feature image" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-30"></div>
+                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning left-5"></div>
+            </div>
+        </section> <!--cat end-->
+
+<!-- Our Web Design Process Start -->
+<section class="work-process ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">Process</h4>
+                    <h2>Our Web Design Process</h2>
+                    <p>Discover how we meticulously craft websites from inception to deployment, ensuring exceptional quality and user experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">1</span>
+                    </div>
+                    <h3 class="h5">Discovery</h3>
+                    <p class="mb-0">We begin by understanding your business goals, target audience, and project requirements to lay a solid foundation for the web design process.</p>
+                </div>
+            </div>
+            <div class="dots-line first"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">2</span>
+                    </div>
+                    <h3 class="h5">Design & Planning</h3>
+                    <p class="mb-0">Our designers create wireframes and mockups based on your requirements, ensuring intuitive navigation and engaging user experience.</p>
+                </div>
+            </div>
+            <div class="dots-line first"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0 mb-md-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">3</span>
+                    </div>
+                    <h3 class="h5">Development</h3>
+                    <p class="mb-0">Our skilled developers bring the design to life, using the latest technologies and coding standards to build responsive and scalable websites.</p>
+                </div>
+            </div>
+            <div class="dots-line first"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">4</span>
+                    </div>
+                    <h3 class="h5">Testing & Deployment</h3>
+                    <p class="mb-0">We conduct rigorous testing to ensure compatibility, functionality, and security before deploying your website to ensure a smooth launch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Web Design Process End -->
+
+
+  <!--customer review tab section start-->
+  <section class="testimonial-section ptb-120 bg-light-subtle">
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">Testimonial</h4>
+                    <h2>What They Say About Us</h2>
+                    <p>Discover what our clients are saying about our services in their own words, providing valuable insights and testimonials that showcase our commitment to excellence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative w-100">
+                    <div class="swiper testimonialSwiper">
+                        <div class="swiper-wrapper">{% for review in review %}
+                            <div class="swiper-slide">
+                                <div class="border border-2 p-5 rounded-custom position-relative">
+                                    <img src="{% static 'assets/img/testimonial/quotes-dot.svg' %}" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                                    <div class="d-flex mb-32 align-items-center">
+                                        {% if reviews.client_image %}
+                                        <img src="{{review.client_image.url}}" class="img-fluid me-3 rounded" width="60" alt="user">
+                                        {% endif %}
+                                        <div class="author-info">
+                                            <h6 class="mb-0">{{review.client_name}}</h6>
+                                            <small>{{review.designation}}</small>
+                                        </div>
+                                    </div>
+                                    <blockquote>
+                                        <!-- <h6>The Best Template You Got to Have it!</h6> -->
+                                        {{review.review}}
+                                    </blockquote>
+                                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                    </ul>
+                                    <img src="{% static 'assets/img/testimonial/quotes.svg' %}" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
+                                </div>
+                                
+                            </div>
+                            {% endfor %}
+                        </div>
+                    <div class="swiper-nav-control">
+                        <span class="swiper-button-next"></span>
+                        <span class="swiper-button-prev"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!--customer review tab section end-->
+
+<!--cat subscribe start-->
+<!--cat subscribe end-->
+
+<!--integration section start-->
+ <!--integration section end-->
+
+<!--blog section start-->
+<section class="home-blog-section ptb-120 bg-light-subtle ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="section-heading text-center">
+                    <h4 class="text-primary h5"></h4>
+                    <h2>Our Projects</h2>
+                    <p>Discover our portfolio of groundbreaking projects. See firsthand how we deliver excellence through innovation and dedication.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center g-4">{% for projects in project %}
+                <div class="col-xl-4 col-md-6">
+                    <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                        <div class="thumbnail overflow-hidden">
+                            <a href="blog-single.html"><img src="{{projects.project_image.url}}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                        </div>
+                        <div class="sc-blog-card-content p-4">
+                            <!-- <a href="http://tinos.co.in/" class="d-inline-block text-primary badge bg-primary-soft mb-3">Web Designed By</a> -->
+                            <a href="{{projects.website_link}}">
+                                <h5 class="mb-3" style="text-align: center; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{projects.project_name}}</h5>
+                            </a>
+                            <!-- <p class="mb-4">Appropriately empower robust infomediaries via resource maximizing scenarios.</p> -->
+                        </div>
+                    </article>
+                </div>{% endfor %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="text-center mt-5">
+                <a href="{% url 'contact' %}" class="btn btn-primary">Get Start</a>
+            </div>
+        </div>
+    </div>
+</section> <!--blog section end-->
+<section class="digi-contact pt-60 pb-120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="digi-contact-left">
+                    <div>
+                        <span class="span-arrow">Best Yout website</span>
+                        <img src="{% static 'assets/img/arro-right.svg' %}" alt="arrow" />
+                    </div>
+                    <h2 class="mb-3">
+                        Get in touch <span class="text-orange">Today!</span>
+                    </h2>
+                    <p>
+                        Contact us today to explore how our services can address your needs and drive your success forward.
+                    </p>
+                    <ul class="d-flex list-unstyled d-flex flex-wrap list-two-col mb-0 mt-5">
+                        <li class="pe-4">
+                            <div class="bg-white contact-box mb-4 mb-md-0">
+                                <img src="{% static 'assets/img/icons/c-i-1.svg' %}" alt="icon" />
+                                <h4 class="h5">Email Address</h4>
+                                <p class="fw-bold">support@tinos.co.in</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bg-white contact-box">
+                                <img src="{% static 'assets/img/icons/c-i-2.svg' %}" alt="icon" />
+                                <h4 class="h5">Phone</h4>
+                                <p class="fw-bold">+91 7907358458</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="digi-contact-form-bg bg-white position-relative">
+                    <ul class="list-unstyled d-none d-xl-block m-0">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <form method="post">{% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="First Name" name="first_name" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Last Name" name="last_name" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email" name="email"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <input type="number" class="form-control" placeholder="Phone" name="number"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Subject" name="message"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Company" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <textarea rows="5" class="w-100 form-control" placeholder="Message.."></textarea>
+                            </div>
+                            <div class="col-3">
+                                <button class="mt-4 btn rounded-pill bg-orange">
+                                    Get in touch
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        {% endblock %}

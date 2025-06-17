@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Viewer</title>
+</head>
+<body>
+    <h1>Certificate Viewer</h1>
+    <form method="post" action="{% url 'certificate_view' %}">
+        {% csrf_token %}
+        <label for="id1">Enter ID :</label>
+        <input type="text" name="id1" required><br><br>
+        <button type="submit">View Certificate</button>
+    </form>
+</body>
+</html>

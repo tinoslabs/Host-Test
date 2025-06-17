@@ -1,0 +1,67 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+ 
+            <div class="col-lg-11 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Servieces</h4>
+               
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                            Serviece Name
+                          </th>
+                          <th>
+                           Video Url
+                          </th>
+                    
+                       
+                          <th>
+                            Update
+                          </th>
+                          <th>
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for serviece in servieces %}
+                        <tr>
+                          <td style="width: 150px; ">
+                            {{ serviece.service_name }}
+                          </td>
+                          <td style="width: 150px; ">
+                            {{ serviece.url }}
+                          </td>
+                        
+                        
+                         
+                         
+                          <td style="width: 150px; ">
+                            <a href="{% url 'update_servieces' serviece.id  %}"><button><i class="mdi mdi-cloud-upload" aria-hidden="true"></i> </button></a>
+                               
+                                <!-- <a class="nav-link" data-bs-toggle="collapse" href= aria-expanded="false" aria-controls="ui-basic">
+                                  <i class="mdi mdi-cloud-upload"></i>
+                                
+                                  <i class="menu-arrow"></i>
+                                </a> -->
+                          </td>
+                          <td style="width: 150px; ">
+                            <a href="{% url 'delete_serviece' serviece.id  %}"><button><i class="mdi mdi-delete" aria-hidden="true"></i> </button></a>
+                           
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endblock %}

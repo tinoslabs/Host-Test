@@ -1,0 +1,447 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <!--hero section start-->
+        <section class="hero-section ptb-120 text-white bg-gradient" style="background: url('static/assets/img/hero-dot-bg.png')no-repeat center right">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="hero-content-wrap mt-5">
+                            <h1 class="fw-bold display-5">Business Intelligence & Data Analysis</h1>
+                            <p class="lead">Unlocking the power of data through advanced analytical techniques to uncover actionable insights and drive informed decisions</p>
+                            <!-- <div class="action-btn mt-5 align-items-center d-block d-sm-flex d-lg-flex d-md-flex">
+                                <a href="request-demo.html" class="btn btn-danger me-3">Request For Demo</a>
+                                <a href="http://www.youtube.com/watch?v=hAP2QF--2Dg" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn mt-3 mt-lg-0 mt-md-0"> <i
+                                        class="fas fa-play"></i> Watch Demo </a>
+                            </div> -->
+                            <a href="{% url 'service' %}" class="btn btn-primary me-3">Discover More</a>
+                            {% for video in youtube_video %}
+                            {% if video.url %}
+                            <a href="{{ video.url }}" target="_blank" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn mt-3 mt-lg-0 mt-md-0">
+                                <i class="fas fa-play"></i> How It Works
+                            </a>
+                            {% endif %}
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8 mt-5">
+                        <div class="hero-img position-relative circle-shape-images">
+                            <!--animated shape start-->
+                            <ul class="position-absolute animate-element parallax-element circle-shape-list">
+                                <li class="layer" data-depth="0.02">
+                                    <img src="{% static 'assets/img/shape/circle-1.svg' %}" alt="shape" class="circle-shape-item type-1 hero-1">
+                                </li>
+                                <li class="layer" data-depth="0.04">
+                                    <img src="{% static 'assets/img/shape/circle-1.svg' %}" alt="shape" class="circle-shape-item type-2 hero-1">
+                                </li>
+                                <li class="layer" data-depth="0.04">
+                                    <img src="{% static 'assets/img/shape/circle-1.svg' %}" alt="shape" class="circle-shape-item type-3 hero-1">
+                                </li>
+                                <li class="layer" data-depth="0.03">
+                                    <img src="{% static 'assets/img/shape/circle-1.svg' %}" alt="shape" class="circle-shape-item type-4 hero-1">
+                                </li>
+                                <li class="layer" data-depth="0.03">
+                                    <img src="{% static 'assets/img/shape/circle-1.svg' %}" alt="shape" class="circle-shape-item type-5 hero-1">
+                                </li>
+                            </ul>
+                            <!--animated shape end-->
+                            <img src="{% static 'assets/img/screen/animated-screen-5.svg' %}" alt="hero img" class="img-fluid position-relative z-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--hero section end-->
+
+        <!--feature promo section start-->
+        <section class="feature-section ptb-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="section-heading text-center">
+                            <h4 class="text-primary h5">Build Quality</h4>
+                            <h2>Our Special Features</h2>
+                            <p>Authoritatively underwhelm excellent methodologies
+                                via premium expertise competitive than open-source
+                                imperatives disseminate. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="position-relative">
+                            <div class="cta-card rounded-custom text-center custom-shadow p-5 bg-white mt-4 mt-lg-0 mt-md-0 z-2">
+                                <div class="feature-icon d-inline-block bg-primary-soft rounded-circle mb-32">
+                                    <i class="fas fa-shield-alt text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5">Quality First</h3>
+                                <p class="mb-0">Ensuring precise insights through meticulous data validation and expert analysis.</p>
+                            </div>
+                            <!--pattern start-->
+                            <div class="dot-shape-bg position-absolute z--1 left--40 top--40">
+                                <img src="{% static 'assets/img/shape/dot-big-square.svg' %}" alt="shape">
+                            </div>
+                            <!--pattern end-->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="position-relative">
+                            <div class="cta-card rounded-custom text-center custom-shadow p-5 bg-white mt-4 mt-lg-0 mt-md-0">
+                                <div class="feature-icon d-inline-block bg-danger-soft rounded-circle mb-32">
+                                    <i class="fas fa-headset text-danger fa-2x"></i>
+                                </div>
+                                <h3 class="h5">Communication</h3>
+                                <p class="mb-0">Transparent collaboration and clear insights drive informed decisions in our data analysis process</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="position-relative">
+                            <div class="cta-card rounded-custom text-center custom-shadow p-5 bg-white mt-4 mt-lg-0">
+                                <div class="feature-icon d-inline-block bg-success-soft rounded-circle mb-32">
+                                    <i class="fas fa-grin-stars text-success fa-2x"></i>
+                                </div>
+                                <h3 class="h5">Reliability</h3>
+                                <p class="mb-0">Our commitment to reliability ensures accurate analysis, empowering confident decision-making</p>
+                            </div>
+                            <!--pattern start-->
+                            <div class="dot-shape-bg position-absolute z--1 right--40 bottom--40">
+                                <img src="{% static 'assets/img/shape/dot-big-square.svg' %}" alt="shape">
+                            </div>
+                            <!--pattern end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--feature promo section end-->
+
+        <!--feature left right content start-->
+        <section class="feature-section ptb-120">
+            <div class="container">
+                <div class="row align-content-center justify-content-between">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="section-heading mb-5">
+                            <div class="icon-box rounded-custom bg-danger shadow-sm d-inline-block">
+                                <i class="fas fa-lock fa-2x text-white"></i>
+                            </div>
+                            <h2>Increasing Business Success With Technology</h2>
+                            <p>Uniquely benchmark multifunctional catalysts for change via manufactured products brand scalable products. Network orthogonal infomediaries through pandemic initiatives. </p>
+                        </div>
+                        <div class="single-feature d-flex mb-4">
+                            <span class="fas fa-bezier-curve fa-2x text-primary"></span>
+                            <div class="ms-4 mt-2">
+                                <h5>Pixel Perfect Design</h5>
+                                <p>Credibly syndicate enterprise total linkage whereas cost effective of the art data without multifunctional. </p>
+                            </div>
+                        </div>
+                        <div class="single-feature d-flex mb-4">
+                            <span class="fas fa-code fa-2x text-primary"></span>
+                            <div class="ms-4 mt-2">
+                                <h5>Development Execution</h5>
+                                <p>Synergistically communicate excellent rather than enterprise-wide value quickly architect emerging interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <div class="feature-shape-img position-relative mt-5 mt-lg-0">
+                            <div class="img-bg-shape position-absolute">
+                                <img src="{% static 'assets/img/integations/shape.svg' %}" alt="integations">
+                            </div>
+                            <img src="{% static 'assets/img/data_analysis-1.jpg' %}" class="img-fluid skewed-img-right rounded-custom shadow-lg" alt="softtent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-choose-us pt-60 pb-120">
+            <div class="container">
+                <div class="row justify-content-lg-between align-items-center">
+                    <div class="col-lg-6 col-12 order-1 order-lg-0">
+                        <div class="feature-img-holder mt-5 mt-lg-0 mt-xl-0">
+                            <img src="{% static 'assets/img/widget-8.png' %}" class="img-fluid" alt="feature-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <div class="why-choose-content">
+                            <div class="icon-box rounded-custom bg-primary shadow-sm d-inline-block">
+                                <i class="fas fa-shield fa-2x text-white"></i>
+                            </div>
+                            <h2>Advanced Analytics, Understand Business</h2>
+                            <p>Distinctively promote parallel vortals with ubiquitous e-markets. Proactively benchmark turnkey optimize next-generation strategic leadership without resource sucking ideas.</p>
+                            <ul class="list-unstyled d-flex flex-wrap list-two-col mt-4 mb-4">
+                                <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Thought leadership</li>
+                                <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Personal branding</li>
+                                <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Modernized prospecting</li>
+                                <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Better win rates</li>
+                                <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Showcasing success</li>
+                                <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Sales compliance</li>
+                            </ul>
+                            <!-- <a href="about-us.html" class="read-more-link text-decoration-none">Know More About Us <i
+                                class="fas fa-arrow-right ms-2"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--feature left right content end-->
+
+        <!--feature section start-->
+        <section class="feature-section">
+            <div class="container-fluid">
+                <div class="feature-container mx-lg-5 position-relative bg-gradient ptb-120 rounded-custom">
+                    <img src="{% static 'assets/img/feature-bg-2.jpg' %}" alt="feature-bg" class="feature-bg-mockup position-absolute w-100 h-100 left-0 right-0 top-0 bottom-0 rounded-custom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="feature-bg-img-content position-relative z-5">
+                                    <div class="section-heading">
+                                        <h2>Build Interactions Visually Website for Your Company</h2>
+                                        <p>Intrinsicly impact resource sucking initiatives with 24/7 relationships communicate integrated products via synergistic leadership skills. Conveniently pursue future-proof web services through empowered bandwidth.</p>
+                                    </div>
+
+                                    <ul class="list-unstyled d-flex flex-wrap list-two-col mt-5 mb-0">
+                                        <li class="py-3">
+                                            <h3 class="feature-number text-primary mb-2">55%</h3>
+                                            <p>Compellingly engage corporate scenarios for monetize. </p>
+                                        </li>
+                                        <li class="py-3">
+                                            <h3 class="feature-number text-primary mb-2">5K+</h3>
+                                            <p>Conveniently target enterprise vortals for process-centric. </p>
+                                        </li>
+                                        <li class="py-3">
+                                            <h3 class="feature-number text-primary mb-2">15M+</h3>
+                                            <p>Completely strategize long-term high-impact paradigms. </p>
+                                        </li>
+                                        <li class="py-3">
+                                            <h3 class="feature-number text-primary mb-2">95%</h3>
+                                            <p>Uniquely negotiate compelling platforms via standardized. </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--feature section end-->
+
+        <!--customer review tab section start-->
+  <section class="testimonial-section ptb-120 bg-light-subtle">
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">Testimonial</h4>
+                    <h2>What They Say About Us</h2>
+                    <p>Discover what our clients are saying about our services in their own words, providing valuable insights and testimonials that showcase our commitment to excellence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative w-100">
+                    <div class="swiper testimonialSwiper">
+                        <div class="swiper-wrapper">{% for review in review %}
+                            <div class="swiper-slide">
+                                <div class="border border-2 p-5 rounded-custom position-relative">
+                                    <img src="{% static 'assets/img/testimonial/quotes-dot.svg' %}" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                                    <div class="d-flex mb-32 align-items-center">
+                                        {% if reviews.client_image %}
+                                        <img src="{{review.client_image.url}}" class="img-fluid me-3 rounded" width="60" alt="user">
+                                        {% endif %}
+                                        <div class="author-info">
+                                            <h6 class="mb-0">{{review.client_name}}</h6>
+                                            <small>{{review.designation}}</small>
+                                        </div>
+                                    </div>
+                                    <blockquote>
+                                        <!-- <h6>The Best Template You Got to Have it!</h6> -->
+                                        {{review.review}}
+                                    </blockquote>
+                                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                    </ul>
+                                    <img src="{% static 'assets/img/testimonial/quotes.svg' %}" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
+                                </div>
+                                
+                            </div>
+                            {% endfor %}
+                        </div>
+                    <div class="swiper-nav-control">
+                        <span class="swiper-button-next"></span>
+                        <span class="swiper-button-prev"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!--customer review tab section end-->
+
+<!--cat subscribe start-->
+<!--cat subscribe end-->
+
+<!--integration section start-->
+ <!--integration section end-->
+
+<!--blog section start-->
+<section class="home-blog-section ptb-120 bg-light-subtle ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="section-heading text-center">
+                    <h4 class="text-primary h5"></h4>
+                    <h2>Our Projects</h2>
+                    <p>Discover our portfolio of groundbreaking projects. See firsthand how we deliver excellence through innovation and dedication.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center g-4">{% for projects in project %}
+                <div class="col-xl-4 col-md-6">
+                    <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                        <div class="thumbnail overflow-hidden">
+                            {% if projects.project_image %}
+                            <a href="{{projects.website_link}}"><img src="{{projects.project_image.url}}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            {% endif %}
+                        </div>
+                        <div class="sc-blog-card-content p-4">
+                            <!-- <a href="http://tinos.co.in/" class="d-inline-block text-primary badge bg-primary-soft mb-3">Web Designed By</a> -->
+                            <a href="{{projects.website_link}}">
+                                <h5 class="mb-3" style="text-align: center; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{projects.project_name}}</h5>
+                            </a>
+                            <!-- <p class="mb-4">Appropriately empower robust infomediaries via resource maximizing scenarios.</p> -->
+                        </div>
+                    </article>
+                </div>{% endfor %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="text-center mt-5">
+                <a href="{% url 'contact' %}" class="btn btn-primary">Get Start</a>
+            </div>
+        </div>
+    </div>
+</section> <!--blog section end-->
+
+        <!--faq section start-->
+        <section class="faq-section ptb-120 bg-light-subtle">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-6">
+                        <div class="section-heading text-center">
+                            <h4 class="h5 text-primary">FAQ</h4>
+                            <h2>Frequently Asked Questions</h2>
+                            <p>Conveniently mesh cooperative services via magnetic outsourcing. Dynamically grow value whereas accurate e-commerce vectors. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-5 col-12">
+                        <div class="faq-wrapper">
+                            <div class="faq-item mb-5">
+                                <h5><span class="h3 text-primary me-2">1.</span> How does back pricing work?</h5>
+                                <p>Progressively enable collaborative inexpensive supply chains. Efficiently maintain economically methods of empowerment for synergistic sound scenarios.</p>
+                            </div>
+                            <div class="faq-item mb-5">
+                                <h5><span class="h3 text-primary me-2">2.</span> How do I calculate how much price?</h5>
+                                <p>Globally benchmark customized mindshare before clicks-and-mortar partnerships. Efficiently maintain economically sound scenarios and whereas client-based progressively. </p>
+                            </div>
+                            <div class="faq-item">
+                                <h5><span class="h3 text-primary me-2">3.</span> Can you show me an example?</h5>
+                                <p> Dynamically visualize whereas competitive relationships. Progressively benchmark customized partnerships generate interdependent benefits rather sound scenarios and robust alignments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center mt-4 mt-lg-0 mt-md-0">
+                            <img src="{% static 'assets/img/faq.svg' %}" alt="faq" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--faq section end-->
+        
+        <!--contact us section start-->
+        <section class="digi-contact pt-60 pb-120">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="digi-contact-left">
+                            <div>
+                                <span class="span-arrow">Best Yout website</span>
+                                <img src="{% static 'assets/img/arro-right.svg' %}" alt="arrow" />
+                            </div>
+                            <h2 class="mb-3">
+                                Get in touch <span class="text-orange">Today!</span>
+                            </h2>
+                            <p>
+                                Contact us today to explore how our services can address your needs and drive your success forward.
+                            </p>
+                            <ul class="d-flex list-unstyled d-flex flex-wrap list-two-col mb-0 mt-5">
+                                <li class="pe-4">
+                                    <div class="bg-white contact-box mb-4 mb-md-0">
+                                        <img src="{% static 'assets/img/icons/c-i-1.svg' %}" alt="icon" />
+                                        <h4 class="h5">Email Address</h4>
+                                        <p class="fw-bold">support@tinos.co.in</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bg-white contact-box">
+                                        <img src="{% static 'assets/img/icons/c-i-2.svg' %}" alt="icon" />
+                                        <h4 class="h5">Phone</h4>
+                                        <p class="fw-bold">+91 7907358458</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="digi-contact-form-bg bg-white position-relative">
+                            <ul class="list-unstyled d-none d-xl-block m-0">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <form method="post">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="First Name" name="first_name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="Last Name" name="last_name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" placeholder="Email" name="email"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <input type="number" class="form-control" placeholder="Phone" name="number"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" id="yourMessage" name="message" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="mt-4 btn rounded-pill bg-orange">
+                                            Get in touch
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--contact us section end-->
+
+        {% endblock %}

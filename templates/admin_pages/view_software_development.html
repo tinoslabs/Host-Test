@@ -1,0 +1,51 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+ 
+            <div class="col-lg-11 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">View Video Link</h4>
+               
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                           Vedio Link
+                          </th>
+                          
+                          <th>
+                           Date
+                          </th>
+                       
+                          
+                          <th>
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for link in video %}
+                        <tr>
+                          <td style="width: 150px; ">
+                            {{ link.url }}
+                          </td>
+                          <td style="width: 150px; ">
+                            {{ link.uploaded_at }}
+                          </td>
+                          <td style="width: 150px; ">
+                            <a href="{% url 'delete_software_development' link.id  %}"><button><i class="mdi mdi-delete" aria-hidden="true"></i> </button></a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endblock %}

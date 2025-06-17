@@ -1,0 +1,85 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+      
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-6 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Update Event</h4>
+                      <!-- <p class="card-description">
+                        Basic form layout
+                      </p> -->
+                      <form class="forms-sample" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                        
+                        <div class="form-group">
+                          <label for="exampleDescription">Messages and Greetings</label>
+                          <textarea class="form-control" name="description" id="exampleDescription" rows="3" style="height: 150px;" placeholder="Enter your Review" oninput="checkCharacterLimit(this)" required>{{event.description}}</textarea>
+                          <span id="character_error" style="color: red; display: none;">Maximum 150 characters allowed</span>
+                      </div>
+                    
+                    
+                  
+                  <!-- Current Review Video -->
+                  <div class="form-group">
+                      <label>Current Video</label><br>
+                      {% if event.event_video %}
+                          <video width="320" height="240" controls>
+                              <source src="{{ event.event_video.url }}" type="video/mp4">
+                              Your browser does not support the video tag.
+                          </video>
+                          <br>
+                          <!-- <input type="checkbox" name="remove_video"> Remove Current Video -->
+                      {% else %}
+                          <p>No video available</p>
+                      {% endif %}
+                  </div>
+                  <!-- New Review Video -->
+                  <div class="form-group">
+                      <label for="videoFile">Upload New Video</label> <br>
+                      <input type="file" class="form-control-file" id="videoFile" name="event_video" accept="video/*">
+                  </div>
+                  
+                  
+                        <div class="form-check form-check-flat form-check-primary">
+                          <label class="form-check-label">
+                            <!-- <input type="checkbox" class="form-check-input">
+                            Remember me -->
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <!-- <button class="btn btn-light">Cancel</button> -->
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              document.getElementById('product_name').addEventListener('input', function() {
+                  var nameInput = this.value;
+                  if (nameInput.length > 50) {
+                      document.getElementById('name_error').style.display = 'block';
+                  } else {
+                      document.getElementById('name_error').style.display = 'none';
+                  }
+              });
+          
+          
+              function checkCharacterLimit(textarea) {
+                  var maxLength = 400; // Maximum character limit
+                  var currentLength = textarea.value.length;
+          
+                  if (currentLength > maxLength) {
+                      document.getElementById('character_error').style.display = 'block';
+                  } else {
+                      document.getElementById('character_error').style.display = 'none';
+                  }
+              }
+          </script>
+            
+          
+            {% endblock %}

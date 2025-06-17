@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+        <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('static/assets/img/page-header-bg.svg')no-repeat bottom left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <h1 class="display-5 fw-bold">Our Premium Services</h1>
+                        <p class="lead">Unlock unparalleled value with our premium services. Experience tailored solutions and superior results for your business needs.</p>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
+            </div>
+        </section>
+
+        <section class="sc-blog-section bg-white position-relative overflow-hidden z-1 ptb-120 border-line-bg">
+            <div class="container">
+                <div class="row justify-content-center g-4">
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'drone_development' %}"><img src="{% static 'assets/img/drone.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'drone_development' %}" class="d-inline-block text-primary badge bg-primary-soft mb-3" style="font-size: 18px;">Drone Development</a>
+                                
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'crm_development' %}"><img src="{% static 'assets/img/crm.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'crm_development' %}" class="d-inline-block text-danger badge bg-danger-soft mb-3 " style="font-size: 18px;">CRM development</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'erp_development' %}"><img src="{% static 'assets/img/erp.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'erp_development' %}" class="d-inline-block text-warning badge bg-warning-soft mb-3" style="font-size: 18px;">
+                                    ERP Development</a>
+                        </article>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'robotics' %}"><img src="{% static 'assets/img/4556.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'robotics' %}" class="d-inline-block text-warning badge bg-warning-soft mb-3" style="font-size: 18px;">
+                                    Robotics</a>
+                        </article>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'ecommerce_solutions' %}"><img src="{% static 'assets/img/ecommerce-new.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'ecommerce_solutions' %}" class="d-inline-block text-primary badge bg-primary-soft mb-3" style="font-size: 18px;">
+                                    Ecommerce Solutions</a>
+                        </article>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'automation' %}"><img src="{% static 'assets/img/automation-1.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'automation' %}" class="d-inline-block text-danger badge bg-danger-soft mb-3" style="font-size: 18px;">
+                                    Automation</a>
+                        </article>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6">
+                        <article class="sc-blog-card bg-white rounded-4 overflow-hidden rounded-4 overflow-hidden">
+                            <div class="thumbnail overflow-hidden">
+                                <a href="{% url 'flange_management' %}"><img src="{% static 'assets/img/8228.jpg' %}" alt="blog thumb" class="img-fluid" style="height: 250px;"></a>
+                            </div>
+                            <div class="sc-blog-card-content p-4">
+                                <a href="{% url 'flange_management' %}" class="d-inline-block text-danger badge bg-danger-soft mb-3" style="font-size: 18px;">
+                                    Flange Management System</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        {% endblock %}

@@ -1,0 +1,45 @@
+{% extends "admin_pages/base.html" %}
+{% load static %}
+
+{% block content %}
+ 
+            <div class="col-lg-8 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Team Categories</h4>
+               
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Team Category Name</th>
+                          <th>Update</th>
+                          <th>Delete</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for team_category in team_category %}
+                        <tr>
+                          <td>
+                            {{ team_category.team_heading }}
+                          </td>
+                          
+                          <td>
+                            <a href="{% url 'update_team_category' team_category.id  %}"><button><i class="mdi mdi-cloud-upload" aria-hidden="true"></i> </button></a>
+                          </td>
+
+                          <td>
+                            <a href="{% url 'delete_team_category' team_category.id  %}"><button><i class="mdi mdi-delete" aria-hidden="true"></i> </button></a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endblock %}

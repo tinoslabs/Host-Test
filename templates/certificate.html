@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('static/assets/img/page-header-bg.svg')no-repeat bottom left">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <h1 class="display-5 fw-bold" style="text-align: center;">CERTIFICATE VERIFIED</h1>
+                <!-- <p class="lead">Seamlessly actualize client-based users after out-of-the-box value data through
+                    frictionless expertise.</p> -->
+            </div>
+        </div>
+        <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
+    </div>
+</section>
+&nbsp;
+
+
+        <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+            <div class="responsive-wrapper 
+               responsive-wrapper-wxh-572x612"
+               style="-webkit-overflow-scrolling: touch; overflow: auto;">
+               {% if pdf_url %}
+              <iframe src="{{ pdf_url }}"> 
+              </iframe>
+             
+        {% else %}
+            <p>No certificate found for the provided ID.</p>
+        {% endif %}
+              
+            </div>
+            <br>
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="{{ pdf_url }}" download>
+                    <button style="padding: 10px 30px; background-color: #2741b6; color: #ffffff;">Download PDF</button>
+                </a>
+            </div>
+            
+          </div>
+          
+          
+
+<br><br>
+<style>
+   /* CSS for responsive iframe */
+/* ========================= */
+
+/* outer wrapper: set max-width & max-height; max-height greater than padding-bottom % will be ineffective and height will = padding-bottom % of max-width */
+
+#Iframe-Master-CC-and-Rs {
+  max-width: 812px;
+  max-height: 100%; 
+  overflow: hidden;
+}
+
+/* inner wrapper: make responsive */
+.responsive-wrapper {
+  position: relative;
+  height: 0;}
+ 
+.responsive-wrapper iframe {
+  position: absolute;top: 0;
+  left: 0;width: 100%;height: 100%;margin: 0;
+  padding: 0;border: none;}
+
+/* padding-bottom = h/w as % -- sets aspect ratio */
+/* YouTube video aspect ratio */
+.responsive-wrapper-wxh-572x612 {
+  padding-bottom: 107%;
+}
+
+/* general styles */
+/* ============== */
+.set-border {
+  border: 5px inset #ddd;
+}
+.set-box-shadow { 
+  -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+  -moz-box-shadow: 4px 4px 14px #4f4f4f;
+  box-shadow: 4px 4px 14px #4f4f4f;
+}
+.set-padding {
+  padding: 10px;
+}
+.set-margin {
+  margin: 30px;
+}
+.center-block-horiz {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+</style>
+
+{% endblock %}

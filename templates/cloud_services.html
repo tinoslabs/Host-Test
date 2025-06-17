@@ -1,0 +1,428 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="hero-section ptb-120 text-white bg-gradient" style="background: url('static/assets/img/hero-dot-bg.png')no-repeat center right">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-10">
+                <div class="hero-content-wrap mt-5 mt-lg-0 mt-xl-0">
+                    <h1 class="fw-bold display-5">Unlock the Potential of Cloud Services for Your Business</h1>
+                    <p class="lead">Leverage the power of cloud computing to transform your business operations with our comprehensive cloud services. From cloud infrastructure to data analytics, we provide tailored solutions to meet your specific needs.</p>
+                    <div class="action-btn mt-5 align-items-center d-block d-sm-flex d-lg-flex d-md-flex">
+                        <a href="{% url 'contact' %}" class="btn btn-primary me-3">Get Started</a>
+                        {% for video in youtube_video %}
+                            <a href="{{ video.url }}" target="_blank" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn mt-3 mt-lg-0 mt-md-0">
+                                <i class="fas fa-play"></i> Watch Cloud Demo
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 mt-5">
+                <div class="hero-img position-relative circle-shape-images">
+                    <img src="{% static 'assets/img/57775.png' %}" alt="hero img" class="img-fluid position-relative z-5">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="promo-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10">
+                <div class="section-heading text-center">
+                    <h2>Empowering Your Cloud Experience</h2>
+                    <p>Discover how we facilitate seamless connectivity and enhance collaboration through our cloud services.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="promo-single position-relative text-center bg-white custom-shadow rounded-custom p-5 mb-4">
+                    <div class="promo-icon mb-32">
+                        <i class="fas fa-wifi text-primary fa-3x"></i>
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Stay Connected</h3>
+                        <p class="mb-0">Ensuring uninterrupted connectivity to your cloud resources, keeping your business operations running smoothly.</p>
+                    </div><br>
+                    <!--pattern start-->
+                    <div class="dot-shape-bg position-absolute z--1 left--40 top--40">
+                        <img src="{% static 'assets/img/shape/dot-big-square.svg' %}" alt="shape">
+                    </div>
+                    <!--pattern end-->
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="promo-single position-relative text-center bg-white custom-shadow rounded-custom p-5 mb-4">
+                    <div class="promo-icon mb-32">
+                        <i class="fas fa-user-friends text-success fa-3x"></i>
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Encourage Collaboration</h3>
+                        <p class="mb-0">Fostering teamwork and productivity through collaborative tools and shared cloud environments.</p>
+                    </div><br>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="promo-single position-relative text-center bg-white custom-shadow rounded-custom p-5 mb-4">
+                    <div class="promo-icon mb-32">
+                        <i class="fas fa-bezier-curve text-danger fa-3x"></i>
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Build Connections</h3>
+                        <p class="mb-0">Creating secure and scalable connections between your applications and cloud infrastructure for seamless operations.</p>
+                    </div>
+                    <!--pattern start-->
+                    <div class="dot-shape-bg position-absolute z--1 right--40 bottom--40">
+                        <img src="{% static 'assets/img/shape/dot-big-square.svg' %}" alt="shape">
+                    </div>
+                    <!--pattern end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="feature-tab-section ptb-120 bg-light-subtle">
+                <div class="container">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-md-10 col-lg-6">
+                            <div class="section-heading text-center">
+                                <h2>Explore Cloud Services</h2>
+                                <p>Our team specializes in providing top-notch cloud services tailored to meet your business needs. Discover the key features:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav justify-content-center feature-tab-list-2 mb-0" id="nav-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-selected="false">
+                                        Data Security and Privacy
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-selected="false">
+                                        Resource Optimization
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" role="tab" aria-selected="false">
+                                        Scalability and Flexibility
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade pt-60 active show" id="tab-1" role="tabpanel">
+                                    <div class="row justify-content-center align-items-center justify-content-around">
+                                        <div class="col-lg-5">
+                                            <div class="feature-tab-info">
+                                                <h3>Data Security and Privacy</h3>
+                                                <p>Our cloud services prioritize data security and privacy, implementing robust measures to safeguard your sensitive information.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img src="{% static 'assets/img/widget-12.png' %}" alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade pt-60" id="tab-2" role="tabpanel">
+                                    <div class="row justify-content-center align-items-center justify-content-around">
+                                        <div class="col-lg-5">
+                                            <img src="{% static 'assets/img/widget-8.png' %}" alt="feature tab" class="img-fluid mb-4 mb-lg-0 mb-xl-0">
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="feature-tab-info">
+                                                <h3>Resource Optimization</h3>
+                                                <p>Our cloud services include advanced resource optimization techniques to ensure efficient utilization and cost-effectiveness.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade pt-60" id="tab-3" role="tabpanel">
+                                    <div class="row justify-content-center align-items-center justify-content-around">
+                                        <div class="col-lg-5">
+                                            <div class="feature-tab-info">
+                                                <h3>Scalability and Flexibility</h3>
+                                                <p>We offer scalable and flexible cloud solutions that can adapt to your business needs, providing seamless growth opportunities.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <img src="{% static 'assets/img/widget-11.png' %}" alt="feature tab" class="img-fluid mt-4 mt-lg-0 mt-xl-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+         
+           
+            <section class="feature-section ptb-120 bg-light-subtle">
+                <div class="container">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-md-10 col-lg-6">
+                            <div class="section-heading text-center">
+                                <h2>Unlock the Power of Cloud Services</h2>
+                                <p>Discover our tailored cloud services designed to meet your business needs and drive growth. Explore the key features below:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="feature-grid">
+                                <div class="feature-card bg-white shadow-sm highlight-card rounded-custom p-5" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="icon-box d-inline-block rounded-circle bg-primary-soft mb-32">
+                                        <i class="fas fa-cloud icon-sm text-primary"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h5">Custom Cloud Solutions</h3>
+                                        <p>Our team specializes in creating customized cloud solutions tailored to your business requirements. We work closely with you to design and implement cloud services optimized for performance and scalability.</p>
+                                        <h6 class="mt-4">Key Features:</h6>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Customized cloud solutions tailored to your needs</li>
+                                            <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Expert consultation throughout the development process</li>
+                                            <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Integration of advanced cloud features for enhanced functionality</li>
+                                            <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Rigorous testing and optimization to ensure optimal performance</li>
+                                            <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Comprehensive documentation for easy reference and future enhancements</li>
+                                            <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>On-going support and maintenance to address any issues and ensure continued success</li>
+                                        </ul>
+                                    </div>
+                                    <a href="{% url 'contact' %}" class="link-with-icon text-decoration-none mt-3">View Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="feature-card bg-white shadow-sm rounded-custom p-5" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="icon-box d-inline-block rounded-circle bg-success-soft mb-32">
+                                        <i class="fas fa-chart-bar icon-sm text-success"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h5">Data Management</h3>
+                                        <p>Efficiently manage and store your data in the cloud with our advanced data management solutions. Ensure data security, accessibility, and scalability for your business needs.</p>
+                                    </div>
+                                    <a href="{% url 'contact' %}" class="link-with-icon text-decoration-none mt-3">View Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="feature-card bg-white shadow-sm rounded-custom p-5" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="icon-box d-inline-block rounded-circle bg-danger-soft mb-32">
+                                        <i class="fas fa-cogs icon-sm text-danger"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h5">Infrastructure as a Service (IaaS)</h3>
+                                        <p>Utilize our Infrastructure as a Service (IaaS) offerings to access scalable and flexible infrastructure resources on-demand. Drive efficiency and reduce costs with our cloud-based infrastructure solutions.</p>
+                                    </div>
+                                    <a href="{% url 'contact' %}" class="link-with-icon text-decoration-none mt-3">View Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="feature-card bg-white shadow-sm rounded-custom p-5" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="icon-box d-inline-block rounded-circle bg-dark-soft mb-32">
+                                        <i class="fas fa-network-wired icon-sm text-dark"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h5">Networking Solutions</h3>
+                                        <p>Enhance connectivity and streamline network management with our cloud-based networking solutions. Leverage scalable and reliable networking infrastructure for seamless operations.</p>
+                                    </div>
+                                    <a href="{% url 'contact' %}" class="link-with-icon text-decoration-none mt-3">View Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="feature-card bg-white shadow-sm rounded-custom p-5" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                                        <i class="fas fa-headset icon-sm text-warning"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h5">24/7 Support</h3>
+                                        <p>Get round-the-clock technical support and assistance with our dedicated team of experts. Ensure smooth operations and quick resolution of any issues with our reliable support services.</p>
+                                    </div>
+                                    <a href="{% url 'contact' %}" class="link-with-icon text-decoration-none mt-3">View Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            
+            <section class="testimonial-section ptb-120 bg-light-subtle">
+                <div class="container">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-md-10 col-lg-6">
+                            <div class="section-heading text-center">
+                                <h4 class="h5 text-primary">Testimonial</h4>
+                                <h2>What They Say About Us</h2>
+                                <p>Discover what our clients are saying about our services in their own words, providing valuable insights and testimonials that showcase our commitment to excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="position-relative w-100">
+                                <div class="swiper testimonialSwiper">
+                                    <div class="swiper-wrapper">{% for review in review %}
+                                        <div class="swiper-slide">
+                                            <div class="border border-2 p-5 rounded-custom position-relative">
+                                                <img src="{% static 'assets/img/testimonial/quotes-dot.svg' %}" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                                                <div class="d-flex mb-32 align-items-center">
+                                                    {% if reviews.client_image %}
+                                                    <img src="{{review.client_image.url}}" class="img-fluid me-3 rounded" width="60" alt="user">
+                                                    {% endif %}
+                                                    <div class="author-info">
+                                                        <h6 class="mb-0">{{review.client_name}}</h6>
+                                                        <small>{{review.designation}}</small>
+                                                    </div>
+                                                </div>
+                                                <blockquote>
+                                                    <!-- <h6>The Best Template You Got to Have it!</h6> -->
+                                                    {{review.review}}
+                                                </blockquote>
+                                                <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                                </ul>
+                                                <img src="{% static 'assets/img/testimonial/quotes.svg' %}" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
+                                            </div>
+                                            
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                <div class="swiper-nav-control">
+                                    <span class="swiper-button-next"></span>
+                                    <span class="swiper-button-prev"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!--testimonial section end-->
+    
+            <section class="promo-section ptb-120 bg-light-subtle">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-6">
+                            <div class="section-heading text-center">
+                                <h2>Everything We Do it With Love</h2>
+                                <p>Progressively deploy market positioning catalysts for change and technically sound
+                                    authoritatively enable resource-leveling infrastructures. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
+                                <div class="promo-card-info">
+                                    <h3 class="display-5 fw-medium mb-4">150+</h3>
+                                    <h2 class="h5">Completed Projects</h2>
+                                    <p class="mb-0">Rapidiously embrace distinctive best practices after B2B syndicate. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
+                                <div class="promo-card-info">
+                                    <h3 class="display-5 fw-medium mb-4">1.5k</h3>
+                                    <h2 class="h5">Happy Client</h2>
+                                    <p class="mb-0">Energistically impact synergistic convergence for leadership..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-0">
+                                <div class="promo-card-info">
+                                    <h3 class="display-5 fw-medium mb-4">90%</h3>
+                                    <h2 class="h5">24/7 Support</h2>
+                                    <p class="mb-0">Synergistically revolutionize leadership whereas platform. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="digi-contact pt-60 pb-120">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="digi-contact-left">
+                                <div>
+                                    <span class="span-arrow">Best Yout website</span>
+                                    <img src="{% static 'assets/img/arro-right.svg' %}" alt="arrow" />
+                                </div>
+                                <h2 class="mb-3">
+                                    Get in touch <span class="text-orange">Today!</span>
+                                </h2>
+                                <p>
+                                    Contact us today to explore how our services can address your needs and drive your success forward.
+                                </p>
+                                <ul class="d-flex list-unstyled d-flex flex-wrap list-two-col mb-0 mt-5">
+                                    <li class="pe-4">
+                                        <div class="bg-white contact-box mb-4 mb-md-0">
+                                            <img src="{% static 'assets/img/icons/c-i-1.svg' %}" alt="icon" />
+                                            <h4 class="h5">Email Address</h4>
+                                            <p class="fw-bold">support@tinos.co.in</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bg-white contact-box">
+                                            <img src="{% static 'assets/img/icons/c-i-2.svg' %}" alt="icon" />
+                                            <h4 class="h5">Phone</h4>
+                                            <p class="fw-bold">+91 7907358458</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="digi-contact-form-bg bg-white position-relative">
+                                <ul class="list-unstyled d-none d-xl-block m-0">
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <form method="post">{% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="First Name" name="first_name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="Last Name" name="last_name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" placeholder="Email" name="email"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" placeholder="Phone" name="number"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea class="form-control" id="yourMessage" name="message" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                        </div>
+                                        <div class="col-3">
+                                            <button class="mt-4 btn rounded-pill bg-orange">
+                                                Get in touch
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+{% endblock %}

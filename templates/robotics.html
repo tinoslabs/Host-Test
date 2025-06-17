@@ -1,0 +1,541 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="hero-section text-white hero-ten" style="background: url('static/assets/img/dark-blue-plain.jpg')no-repeat center center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-10">
+                <div class="hero-content-wrap mt-5 mt-lg-0 mt-xl-0">
+                    <h1 class="fw-bold display-5 text-white">
+                        Empower Your Robotics Endeavors with Our Solutions
+                    </h1>
+                    <p class="lead">
+                        Explore cutting-edge robotics solutions designed to elevate your projects. From autonomous systems to AI integration, we provide advanced tools to propel your robotics innovations forward.</p>
+                    <div class="action-btn mt-5 align-items-center d-block d-sm-flex d-lg-flex d-md-flex">
+                        <a href="{% url 'service' %}" class="btn btn-primary me-3">Discover More</a>
+                        {% for video in youtube_video %}
+                        {% if video.url %}
+                        <a href="{{ video.url }}" target="_blank" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn mt-3 mt-lg-0 mt-md-0">
+                            <i class="fas fa-play"></i> Watch Demo
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 mt-5">
+                <div class="hero-img position-relative circle-shape-images">
+                    <img src="{% static 'assets/img/12121.png' %}" alt="hero img" class="img-fluid position-relative z-5" />
+                </div>
+            </div>
+        </div>
+        <!-- <div class="cyber-down-btn text-center position-relative d-none d-lg-block">
+            <a href="#cyber-about" class="text-primary">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div> -->
+    </div>
+</section>
+
+
+<section class="why-choose-us pt-60 pb-120">
+    <div class="container">
+        <div class="row justify-content-lg-between justify-content-center align-items-center">
+            <div class="col-lg-5 col-md-7 order-1 order-lg-0">
+                <div class="why-choose-img position-relative">
+                    <img src="{% static 'assets/img/32812.png' %}" class="img-fluid" alt="Robotics Solutions">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 order-0 order-lg-1">
+                <div class="why-choose-content">
+                    <div class="mb-32">
+                        <h2>Empower Your Projects with Robotics Solutions</h2>
+                        <p>Discover the benefits of robotics solutions and how they can enhance your projects and innovations.</p>
+                    </div>
+                    <ul class="list-unstyled d-flex flex-wrap list-two-col">
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Automated Processes: Streamline tasks and processes with automated robotics solutions, improving efficiency and productivity.</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Advanced Sensors: Utilize advanced sensors and detection systems to enhance the capabilities and precision of your robotics projects.</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>AI Integration: Incorporate artificial intelligence algorithms to enable intelligent decision-making and adaptive behavior in your robotics systems.</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Mobile Robotics: Develop mobile robotics solutions for applications such as exploration, surveillance, and autonomous navigation.</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Collaborative Robots: Implement collaborative robots (cobots) to work alongside humans in various tasks, improving safety and efficiency.</li>
+                        <li class="py-1"><i class="fas fa-check-circle me-2 text-primary"></i>Technical Support: Receive expert technical support and guidance from our team to ensure the success of your robotics projects.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="feature-section-two ptb-120">
+    <div class="container">
+        <div class="row align-items-center justify-content-lg-between justify-content-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="feature-content-wrap">
+                    <div class="section-heading">
+                        <h2>Unlock Robotics Potential with Advanced Solutions</h2>
+                        <p>Empower your robotics projects with cutting-edge solutions designed to enhance performance and innovation. From sensor integration to AI algorithms, we deliver expert services to boost your robotics success.</p>
+                    </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-start mb-4">
+                            <div class="icon-box bg-primary rounded me-4">
+                                <i class="fas fa-cogs text-white"></i>
+                            </div>
+                            <div class="icon-content">
+                                <h3 class="h5">Advanced Sensor Integration</h3>
+                                <p>Enhance robotics capabilities with advanced sensor integration, enabling precise data collection and analysis for improved performance.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-4">
+                            <div class="icon-box bg-danger rounded me-4">
+                                <i class="fas fa-robot text-white"></i>
+                            </div>
+                            <div class="icon-content">
+                                <h3 class="h5">AI Algorithms</h3>
+                                <p>Implement artificial intelligence algorithms to enable intelligent decision-making and adaptive behavior in robotics systems, enhancing autonomy and efficiency.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <div class="icon-box bg-dark rounded me-4">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div class="icon-content">
+                                <h3 class="h5">Customization and Flexibility</h3>
+                                <p>Adapt and customize your robotics solutions to meet specific project requirements and explore flexible integration options for seamless operation.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+                <div class="feature-img-wrap">
+                    <img src="{% static 'assets/img/1223.png' %}" alt="robotics solutions image" class="img-fluid rounded-custom">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="feature-section">
+    <div class="container-fluid">
+        <div class="feature-container mx-lg-5 position-relative bg-gradient ptb-120 rounded-custom">
+            <img src="{% static 'assets/img/bg999.jpg' %}" alt="feature-bg" class="feature-bg-mockup position-absolute w-100 h-100 left-0 right-0 top-0 bottom-0 rounded-custom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="feature-bg-img-content position-relative z-5">
+                            <div class="section-heading">
+                                <h2>Empower Your Robotics Projects with Cutting-Edge Technology</h2>
+                                <p>Enhance your robotics projects with advanced technology solutions designed to optimize performance and drive innovation. Build smarter robots and streamline automation processes with our expertise.</p>
+                            </div>
+
+                            <ul class="list-unstyled d-flex flex-wrap list-two-col mt-5 mb-0">
+                                <li class="py-3">
+                                    <h3 class="feature-number text-primary mb-2">70%</h3>
+                                    <p>Increase in efficiency and productivity of robotics systems.</p>
+                                </li>
+                                <li class="py-3">
+                                    <h3 class="feature-number text-primary mb-2">10K+</h3>
+                                    <p>Number of successful robotics projects completed.</p>
+                                </li>
+                                <li class="py-3">
+                                    <h3 class="feature-number text-primary mb-2">25M+</h3>
+                                    <p>Lines of code written and executed for robotics solutions.</p>
+                                </li>
+                                <li class="py-3">
+                                    <h3 class="feature-number text-primary mb-2">85%</h3>
+                                    <p>Satisfaction rate of clients with our robotics technology.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="feature-tab-section ptb-120 bg-light-subtle">
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h2>Explore Robotics Solutions</h2>
+                    <p>Discover the features and benefits of our robotics solutions tailored to meet your automation needs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav justify-content-center feature-tab-list-2 mb-0" id="nav-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" role="tab" aria-selected="true">
+                            Robot Control
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" role="tab" aria-selected="false">
+                            Sensor Integration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" role="tab" aria-selected="false">
+                            AI & Machine Learning
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tab-4" data-bs-toggle="tab" data-bs-target="#tab-4" role="tab" aria-selected="false">
+                            Automation Process
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade pt-60 show active" id="tab-1" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-5">
+                                <img src="{% static 'assets/img/widget-11.png' %}"  alt="Robot Control" class="img-fluid">
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>Robot Control</h3>
+                                    <p>Efficiently manage and control robotic movements and actions with our intuitive robot control systems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-60" id="tab-2" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-5">
+                                <img src="{% static 'assets/img/widget-12.png' %}" alt="Sensor Integration" class="img-fluid">
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>Sensor Integration</h3>
+                                    <p>Integrate a variety of sensors to enable real-time data collection and analysis for enhanced robotic perception and interaction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-60" id="tab-3" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-5">
+                                <img src="{% static 'assets/img/widget-8.png' %}" alt="AI & Machine Learning" class="img-fluid">
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>AI & Machine Learning</h3>
+                                    <p>Implement AI and machine learning algorithms to enable intelligent decision-making and adaptive behavior in robotics applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-60" id="tab-4" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-5">
+                                <img src="{% static 'assets/img/widget-11.png' %}"  alt="Automation Process" class="img-fluid">
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>Automation Process</h3>
+                                    <p>Automate repetitive tasks and processes to improve efficiency and productivity in robotics operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            
+         
+<section class="work-process ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">Process</h4>
+                    <h2>Our Robotics Solutions Work Process</h2>
+                    <p>Explore our systematic approach to robotics solutions, designed to streamline automation processes and enhance operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">1</span>
+                    </div>
+                    <h3 class="h5">Problem Identification</h3>
+                    <p class="mb-0">Identify specific tasks and processes suitable for automation through careful analysis of operational challenges.</p>
+                </div>
+            </div>
+            <div class="dots-line first"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">2</span>
+                    </div>
+                    <h3 class="h5">Technology Assessment</h3>
+                    <p class="mb-0">Evaluate various robotic technologies and solutions to determine the most suitable ones for addressing identified challenges.</p>
+                </div>
+            </div>
+            <div class="dots-line first"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0 mb-md-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">3</span>
+                    </div>
+                    <h3 class="h5">Prototype Development</h3>
+                    <p class="mb-0">Build prototypes and conduct testing to validate the functionality and performance of selected robotic solutions.</p>
+                </div>
+            </div>
+            <div class="dots-line first"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-0">
+                    <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
+                        <span class="h2 mb-0 text-primary fw-bold">4</span>
+                    </div>
+                    <h3 class="h5">Deployment & Optimization</h3>
+                    <p class="mb-0">Deploy robotic solutions into operational environments and continuously optimize their performance and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="faq-section ptb-120 bg-light-subtle">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">FAQ</h4>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Explore commonly asked questions about our robotics solutions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-5 col-12">
+                <div class="faq-wrapper">
+                    <div class="faq-item mb-5">
+                        <h5><span class="h3 text-primary me-2">1.</span> How does robotic automation work?</h5>
+                        <p>Learn about the principles and mechanisms behind robotic automation and its applications in various industries.</p>
+                    </div>
+                    <div class="faq-item mb-5">
+                        <h5><span class="h3 text-primary me-2">2.</span> What are the benefits of robotics in manufacturing?</h5>
+                        <p>Discover the advantages of integrating robotics into manufacturing processes, including increased efficiency and precision.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5><span class="h3 text-primary me-2">3.</span> Can robotics solutions be customized?</h5>
+                        <p>Explore the possibilities of customizing robotics solutions to meet specific business requirements and industry needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center mt-4 mt-lg-0 mt-md-0">
+                    <img src="{% static 'assets/img/faq.svg' %}" alt="faq" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            
+           
+    
+
+            
+            
+<section class="testimonial-section ptb-120 bg-light-subtle">
+    <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-md-10 col-lg-6">
+                <div class="section-heading text-center">
+                    <h4 class="h5 text-primary">Testimonial</h4>
+                    <h2>What They Say About Us</h2>
+                    <p>Uniquely promote adaptive quality vectors rather than stand-alone e-markets pontificate alternative architectures with accurate schemas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative w-100">
+                    <div class="swiper testimonialSwiper">
+                        <div class="swiper-wrapper">{% for review in review %}
+                            <div class="swiper-slide">
+                                <div class="border border-2 p-5 rounded-custom position-relative">
+                                    <img src="{% static 'assets/img/testimonial/quotes-dot.svg' %}" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
+                                    <div class="d-flex mb-32 align-items-center">
+                                        {% if reviews.client_image %}
+                                        <img src="{{review.client_image.url}}" class="img-fluid me-3 rounded" width="60" alt="user">
+                                        {% endif %}
+                                        <div class="author-info">
+                                            <h6 class="mb-0">{{review.client_name}}</h6>
+                                            <small>{{review.designation}}</small>
+                                        </div>
+                                    </div>
+                                    <blockquote>
+                                        <!-- <h6>The Best Template You Got to Have it!</h6> -->
+                                        {{review.review}}
+                                    </blockquote>
+                                    <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
+                                    </ul>
+                                    <img src="{% static 'assets/img/testimonial/quotes.svg' %}" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
+                                </div>
+                                
+                            </div>
+                            {% endfor %}
+                        </div>
+                    <div class="swiper-nav-control">
+                        <span class="swiper-button-next"></span>
+                        <span class="swiper-button-prev"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--testimonial section end-->
+    
+            <section class="promo-section ptb-120 bg-light-subtle">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-6">
+                            <div class="section-heading text-center">
+                                <h2>Everything We Do it With Love</h2>
+                                <p>Progressively deploy market positioning catalysts for change and technically sound
+                                    authoritatively enable resource-leveling infrastructures. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
+                                <div class="promo-card-info">
+                                    <h3 class="display-5 fw-medium mb-4">150+</h3>
+                                    <h2 class="h5">Completed Projects</h2>
+                                    <p class="mb-0">Rapidiously embrace distinctive best practices after B2B syndicate. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-4">
+                                <div class="promo-card-info">
+                                    <h3 class="display-5 fw-medium mb-4">1.5k</h3>
+                                    <h2 class="h5">Happy Client</h2>
+                                    <p class="mb-0">Energistically impact synergistic convergence for leadership..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="promo-card-wrap promo-border-hover border border-2 bg-white rounded-custom p-5 mb-4 mb-lg-0 mb-md-0">
+                                <div class="promo-card-info">
+                                    <h3 class="display-5 fw-medium mb-4">90%</h3>
+                                    <h2 class="h5">24/7 Support</h2>
+                                    <p class="mb-0">Synergistically revolutionize leadership whereas platform. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="digi-contact pt-60 pb-120">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="digi-contact-left">
+                                <div>
+                                    <span class="span-arrow">Best Yout website</span>
+                                    <img src="{% static 'assets/img/arro-right.svg' %}" alt="arrow" />
+                                </div>
+                                <h2 class="mb-3">
+                                    Get in touch <span class="text-orange">Today!</span>
+                                </h2>
+                                <p>
+                                    Contact us today to explore how our services can address your needs and drive your success forward.
+                                </p>
+                                <ul class="d-flex list-unstyled d-flex flex-wrap list-two-col mb-0 mt-5">
+                                    <li class="pe-4">
+                                        <div class="bg-white contact-box mb-4 mb-md-0">
+                                            <img src="{% static 'assets/img/icons/c-i-1.svg' %}" alt="icon" />
+                                            <h4 class="h5">Email Address</h4>
+                                            <p class="fw-bold">support@tinos.co.in</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bg-white contact-box">
+                                            <img src="{% static 'assets/img/icons/c-i-2.svg' %}" alt="icon" />
+                                            <h4 class="h5">Phone</h4>
+                                            <p class="fw-bold">+91 7907358458</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="digi-contact-form-bg bg-white position-relative">
+                                <ul class="list-unstyled d-none d-xl-block m-0">
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <form method="post">{% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="First Name" name="first_name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" placeholder="Last Name" name="last_name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" placeholder="Email" name="email"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" placeholder="Phone" name="number"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea class="form-control" id="yourMessage" name="message" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                        </div>
+                                        <div class="col-3">
+                                            <button class="mt-4 btn rounded-pill bg-orange">
+                                                Get in touch
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+{% endblock %}

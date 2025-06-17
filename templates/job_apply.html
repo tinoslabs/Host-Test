@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+{% load static %}
+<head>
+    <!--required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--twitter og-->
+    <meta name="twitter:site" content="@themetags">
+    <meta name="twitter:creator" content="@themetags">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tinos Software And Security Solutions LLP - We are creative An Innovative IT and Cyber security Company">
+    <meta property="og:description" content="Tinos Software And Security Solutions LLP - Dive into the world of innovation as this company revolutionizes industries with groundbreaking solutions.all departments work properly together.">
+    <meta property="og:image" content="#">
+
+    <!--facebook og-->
+    <meta property="og:url" content="#">
+    <meta name="twitter:title" content="Tinos Software And Security Solutions LLP - We are creative An Innovative IT and Cyber security Company">
+    <meta property="og:description" content="Tinos Software And Security Solutions LLP - Dive into the world of innovation as this company revolutionizes industries with groundbreaking solutions.all departments work properly together.">
+    <meta property="og:image" content="#">
+    <meta property="og:image:secure_url" content="#">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!--meta-->
+ 
+
+    <!--favicon icon-->
+    <link rel="icon" href="{% static 'assets/img/tinos1 (2).png' %}" type="image/png" sizes="16x16">
+
+    <!--title-->
+    <title>Tinos Software And Security Solutions LLP</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+    <!-- Font -->
+
+    <!--build:css-->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <!-- endbuild -->
+
+    <!--custom css start-->
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+    <!--custom css end-->
+
+</head>
+<style>
+    #preloader .preloader-icon {
+       height: 40px; /* Adjust the height as needed */
+   }
+</style>
+<body>
+
+    <!--preloader start-->
+    <div id="preloader" class="bg-light-subtle">
+        <div class="preloader-wrap">
+            <img src="{% static 'assets/img/tinos1 (2).png' %}" alt="logo" class="img-fluid preloader-icon">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <!--main content wrapper start-->
+    <div class="main-wrapper">
+
+        <!--register section start-->
+        <section class="sign-up-in-section bg-dark ptb-60" style="background: url('static/assets/img/page-header-bg.svg')no-repeat right bottom">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-5 col-md-8 col-12">
+                        <a href="{% url 'index' %}" class="mb-4 d-block text-center"><img src="{% static 'assets/img/tinos1 (2).png' %}" alt="logo" class="img-fluid"></a>
+                        <div class="register-wrap p-5 bg-light-subtle shadow rounded-custom">
+                            <h1 class="h3">Ready to Make Your Mark?</h1>
+                            <h7>Seize the opportunity to shine! Upload your resume now and take the next step towards an exciting career journey with us.</h7>
+                           
+                            <form class="mt-4 register-form" method="post" action="" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-success" role="alert">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                  
+                                    <script>
+                                        
+                                        setTimeout(function() {
+                                            window.location.href = '/career'; 
+                                        }, 3000); 
+                                    </script>
+                                {% endif %}
+                                <div class="mb-3">
+                                    <label for="job_position" class="form-label">Select Job Position:</label>
+                                    <select class="form-select" id="job_position" name="job_position">
+                                        {% for position in job_positions %}
+                                            <option value="{{ position.id }}">{{ position.job_position }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label for="email" class="mb-1">Name <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Name"  name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="password" class="mb-1">Email <span
+                                                class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Email"  name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="password" class="mb-1">Phone Number <span
+                                                class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" placeholder="Phone Number" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="password" class="mb-1">Resume <span
+                                                class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" placeholder="Upload Your Resume" name="pdf_file">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary mt-3 d-block w-100">Submit</button>
+                                    </div>
+                                </div>
+<!--                                 <p class="font-monospace fw-medium text-center text-muted mt-3 pt-4 mb-0">Don’t have an
+                                    account? <a href="register.html" class="text-decoration-none">Sign up Today</a>
+                                    <br>
+                                    <a href="password-reset.html" class="text-decoration-none">Forgot password</a>
+                                </p> -->
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--register section end-->
+    </div>
+
+    <!--build:js-->
+    <script src="{% static 'assets/js/vendors/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/parallax.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/aos.js' %}"></script>
+    <script src="{% static 'assets/js/vendors/massonry.min.js' %}"></script>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+    <!--endbuild-->
+</body>
+
+</html>

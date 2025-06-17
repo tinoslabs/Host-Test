@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <!--page header section start-->
+        <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('static/assets/img/page-header-bg.svg')no-repeat bottom left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h1 class="display-5 fw-bold">Contact Us</h1>
+                        <p class="lead">Contact us today to explore how our services can address your needs and drive your success forward</p>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
+            </div>
+        </section>
+
+        <!-- <section class="cta-subscribe bg-dark ptb-120 position-relative overflow-hidden">
+            <div class="container">
+                <div class="row j">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="subscribe-info-wrap text-center position-relative z-2">
+                            <div class="section-heading">
+                                <h2 style="text-align: left;">Contact Us</h2>
+                            </div>
+                            <div class="text-left">
+                                <p style="text-align: left;">Seamlessly actualize client-based users after out-of-the-box value. Globally embrace
+                                    strategic data through frictionless expertise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
+                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
+            </div>
+        </section> -->
+        
+        <!--page header section end-->
+
+        <!--contact us promo section start-->
+        <section class="contact-promo ptb-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                        <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                            <span class="fa fa-map fa-3x text-primary"></span>
+                            <div class="contact-promo-info mb-4">
+                                <h5>Location</h5>
+                                <p> Tinos Software And Security <br> Solutions LLP,1'st floor Palathinkal Building,Kochapilly road, Palarivattom, Kerala 682025
+                                </p>
+                            </div>
+                            <a href="https://www.google.com/maps/place/Tinos+Software+and+Security+Solutions+LLP./@9.8960555,76.5340786,15z/data=!4m6!3m5!1s0x3b07d9aa2529adb5:0xe2c7efc860e24e00!8m2!3d9.8960555!4d76.5340786!16s%2Fg%2F11h1zwh66r?entry=ttu" class="btn btn-link mt-auto">View on Google Map</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                        <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                            <span class="fas fa-envelope fa-3x text-primary"></span>
+                            <div class="contact-promo-info mb-4">
+                                <h5>Email Us</h5>
+                                <p>Simple drop us an email at <strong>support@tinos.co.in</strong>
+                                    and you'll receive a reply within 24 hours</p>
+                            </div>
+                            <a href="mailto:support@tinos.co.in" class="btn btn-primary mt-auto">Email Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                        <div class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
+                            <span class="fas fa-phone fa-3x text-primary"></span>
+                            <div class="contact-promo-info mb-4">
+                                <h5>Give us a call</h5>
+                                <p>Give us a ring. Our Experts are standing by <strong>Monday to Sunday</strong> for <strong>24 hours</strong>.</p>
+                            </div>
+                            <a href="tel:+917907358458" class="btn btn-link mt-auto">Call +91 7907358458</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact us promo section end-->
+
+        <!--contact us form start-->
+        <section class="contact-us-form pt-60 pb-120" style="background: url('static/assets/img/shape/contact-us-bg.svg')no-repeat center bottom">
+            <div class="container">
+                <div class="row justify-content-lg-between align-items-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="section-heading">
+                            <h2>Talk to Our Sales and Technical Department Team</h2>
+                            <p>Contact us today to explore how our services can address your needs and drive your success forward.</p>
+                        </div>
+                        <form action="#" method="POST"  class="register-form">{% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="mb-1">First name <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="firstName" name="first_name" required placeholder="First name" aria-label="First name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <label for="lastName" class="mb-1">Last name</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last name" aria-label="Last name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="phone" class="mb-1">Phone <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="phone" name="phone" required placeholder="Phone" aria-label="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="email" class="mb-1">Email<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email" aria-label="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="yourMessage" class="mb-1">Message <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <textarea class="form-control" id="yourMessage" name="message" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-4">Get in Touch</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 col-md-10">
+                        <div class="contact-us-img">
+                            <img src="{% static 'assets/img/contact-us-img-2.svg' %}" alt="contact us" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact us form end-->
+
+
+        <!--footer section start-->
+  <!--footer section start-->
+  {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "admin_base.html" %}
+{% load static %}
+{% block content %}
+
+
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+            <div class="text">Toggle</div>
+        </div>
+
+            <div class="container-1">
+                <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+                    <h2>ADD NEWS CATEGORY</h2>
+                    <div class="content-1">
+
+                        <div class="input-box">
+                            <label for="news_heading">News Heading</label>
+                            <input type="text" placeholder="30 Characters only" name="news_heading" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="main_image">Main Image</label>
+                            <input type="file" placeholder="" name="main_image" required>
+                        </div>
+
+                        <div class="button-container-1">
+                            <button type="submit">ADD CATEGORY</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+    </section>
+{% endblock %}
